@@ -1,0 +1,100 @@
+{
+  "nodes": {
+    "node-1": {
+      "id": "node-1",
+      "type": "node",
+      "height": 80,
+      "width": 160,
+      "label": "A",
+      "x": 300,
+      "y": 500,
+      "ports": {
+        "node-1-port-1": {
+          "id": "node-1-port-1",
+          "type": "port",
+          "width": 8,
+          "height": 8,
+          "offset": {
+            "top": 40,
+            "left": 160
+          }
+        }
+      }
+    },
+    "node-2": {
+      "id": "node-2",
+      "type": "node",
+      "height": 80,
+      "width": 160,
+      "label": "B",
+      "x": 591,
+      "y": 500,
+      "ports": {
+        "node-2-port-1": {
+          "id": "node-2-port-1",
+          "type": "port",
+          "width": 8,
+          "height": 8,
+          "offset": {
+            "top": 40,
+            "left": 0
+          }
+        }
+      }
+    },
+    "node-3": {
+      "id": "node-3",
+      "type": "node",
+      "height": 80,
+      "width": 160,
+      "label": "C",
+      "x": 300,
+      "y": 677,
+      "ports": {
+        "node-3-port-1": {
+          "id": "node-3-port-1",
+          "type": "port",
+          "width": 8,
+          "height": 8,
+          "offset": {
+            "top": 40,
+            "left": 0
+          }
+        },
+        "node-3-port-1": {
+          "id": "node-3-port-1",
+          "type": "port",
+          "width": 8,
+          "height": 8,
+          "offset": {
+            "top": 40,
+            "left": 160
+          }
+        }
+      }
+    }
+  },
+  "edges": {
+    "edge-1": {
+      "id": "edge-1",
+      "type": "edge",
+      "sourceNodeId": "node-1",
+      "sourcePortId": "node-1-port-1",
+      "targetNodeId": "node-2",
+      "targetPortId": "node-2-port-1",
+      "anchors": [
+        {
+          "id": "anchor-1",
+          "x": 460,
+          "y": 540
+        },
+        {
+          "id": "anchor-2",
+          "x": 591,
+          "y": 540
+        }
+      ]
+    }
+  },
+  "containers": {}
+}

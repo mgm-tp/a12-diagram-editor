@@ -1,0 +1,9 @@
+{
+  "extends": "./node_modules/@com.mgmtp.a12.devtools/tsconfig/tsconfig",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "jsx": "react-jsx"
+  }
+}

@@ -1,0 +1,55 @@
+/*
+ * SPDX-License-Identifier: EUPL-1.2 OR LicenseRef-commercial
+ *
+ * Copyright (c) 2012-2026 mgm technology partners GmbH
+ *
+ * Dual License
+ * ------------
+ * This source file is part of the mgm A12 Platform and available under
+ * a choice of two different licenses:
+ *
+ * 1. Open-Source License – EUPL v1.2
+ *    You may redistribute and/or modify this file under the terms of the
+ *    European Union Public License, version 1.2 - see https://eupl.eu/.
+ *
+ * 2. Commercial License
+ *    Alternatively, you may obtain a commercial license from
+ *    mgm technology partners GmbH, that permits use of this software
+ *    under different terms (including support and maintenance services).
+ *
+ *    Please contact a12-license@mgm-tp.com for more information.
+ *
+ * You must select and comply with exactly one of the above license options.
+ *
+ * Warranty Disclaimer (applies to either option)
+ * ----------------------------------------------
+ * THIS SOFTWARE IS PROVIDED “AS IS” AND WITHOUT WARRANTY OF ANY KIND,
+ * WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NON-INFRINGEMENT, EXCEPT WHERE SUCH DISCLAIMERS ARE HELD TO BE
+ * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
+ */
+
+
+
+import { Offset, Point } from "../../core/geometry";
+
+export function getDiagramPosition(
+	canvasPosition: Point,
+	absPoint: Point,
+	offset: Offset,
+	zoomLevel: number,
+	stepSize?: number
+): Point {
+	const zoomFactor = zoomLevel / 100;
+	const x = (absPoint.x - canvasPosition.x - offset.left) / zoomFactor;
+	const y = (absPoint.y - canvasPosition.y - offset.top) / zoomFactor;
+
+	return stepSize ? { x: Math.round(x / stepSize) * stepSize, y: Math.round(y / stepSize) * stepSize } : { x, y };
+}
+
+export function getRelativePosition(absPoint: Point, canvasPosition: Point): Point {
+	const x = absPoint.x - canvasPosition.x;
+	const y = absPoint.y - canvasPosition.y;
+	return { x, y };
+}

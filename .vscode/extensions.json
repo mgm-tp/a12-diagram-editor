@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "christian-kohler.path-intellisense",
+  "editorconfig.editorconfig",
+  "wayou.vscode-todo-highlight",
+  "vitest.explorer",
+  "streetsidesoftware.code-spell-checker",
+  "dbaeumer.vscode-eslint",
+  "esbenp.prettier-vscode",
+  "styled-components.vscode-styled-components"
+  ]
+}

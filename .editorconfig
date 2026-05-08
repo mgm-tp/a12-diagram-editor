@@ -1,0 +1,23 @@
+root = true
+
+[**]
+indent_style = space
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.json]
+indent_size = 2
+insert_final_newline = false
+
+[{*.ts,*.tsx,*.kts,*.svg}]
+indent_style = tab
+
+[package.json]
+insert_final_newline = true
+indent_style = tab
+
+[Jenkinsfile]
+indent_size = 4

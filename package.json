@@ -1,0 +1,37 @@
+{
+	"name": "@com.mgmtp.a12.diagrameditor/diagrameditor",
+	"version": "0.0.1-intern",
+	"license": "(EUPL-1.2 OR LicenseRef-commercial)",
+	"description": "Common Diagram Editor build configuration",
+	"scripts": {
+		"clean": "pnpm -r clean && pnpm dlx rimraf node_modules build",
+		"compile": "pnpm -r compile",
+		"depcheck": "pnpm -r --parallel --aggregate-output depcheck",
+		"lint": "eslint . --no-cache --quiet",
+		"lint:fix": "eslint . --no-cache --quiet --fix",
+		"start": "pnpm --filter @com.mgmtp.a12.diagrameditor/diagrameditor-devapp start",
+		"test": "pnpm --filter @com.mgmtp.a12.diagrameditor/diagrameditor test"
+	},
+	"devDependencies": {
+		"@com.mgmtp.a12.devtools/eslint-config": "catalog:",
+		"@com.mgmtp.a12.devtools/prettier-config": "catalog:",
+		"@com.mgmtp.a12.devtools/tsconfig": "catalog:",
+		"eslint": "catalog:",
+		"depcheck": "catalog:",
+		"eslint-config-prettier": "catalog:",
+		"eslint-plugin-chai-friendly": "catalog:",
+		"eslint-plugin-import": "catalog:",
+		"eslint-plugin-notice": "catalog:",
+		"eslint-plugin-prettier": "catalog:",
+		"eslint-plugin-react": "catalog:",
+		"eslint-plugin-react-hooks": "catalog:",
+		"prettier": "catalog:",
+		"typescript-eslint": "catalog:",
+		"typescript": "catalog:"
+	},
+	"pnpm": {
+		"overrides": {
+			"@isaacs/brace-expansion": "catalog:"
+		}
+	}
+}

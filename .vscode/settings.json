@@ -1,0 +1,13 @@
+{
+  "editor.rulers": [
+    120
+  ],
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "[typescript][typescriptreact]": {
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

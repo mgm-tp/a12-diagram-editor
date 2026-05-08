@@ -1,0 +1,250 @@
+THIRD_PARTY_NOTICES
+
+Component: A12 Diagram Editor
+Generated: 2026-03-31 for mgm A12 Platform 2025.06-ext5
+
+The mgm A12 Platform is developed by mgm technology partners GmbH.
+
+https://www.mgm-tp.com.
+
+This file lists third-party software components included in this
+distribution of the mgm A12 Platform and the licenses that apply
+to them.
+
+Component Overview
+-------------------
+
+The following third-party components are included in this distribution:
+
+
+- @babel/core 7.26.9, licensed under MIT
+	Copyright (c) 2014-present Sebastian McKenzie and other contributors
+	Source: https://github.com/babel/babel
+- @babel/preset-env 7.26.9, licensed under MIT
+	Copyright (c) 2014-present Sebastian McKenzie and other contributors
+	Source: https://github.com/babel/babel
+- @babel/preset-react 7.26.3, licensed under MIT
+	Copyright (c) 2014-present Sebastian McKenzie and other contributors
+	Source: https://github.com/babel/babel
+- @babel/preset-typescript 7.26.0, licensed under MIT
+	Copyright (c) 2014-present Sebastian McKenzie and other contributors
+	Source: https://github.com/babel/babel
+- @com.mgmtp.a12.base/base-model-api 29.2.0, licensed under EUPL v1.2
+	Copyright (C) 2012-2026 mgm technology partners GmbH
+	Source: https://github.com/mgm-tp
+- @com.mgmtp.a12.client/client-core 16.2.0, licensed under EUPL v1.2
+	Copyright (C) 2012-2026 mgm technology partners GmbH
+	Source: https://github.com/mgm-tp
+- @com.mgmtp.a12.dataservices/dataservices-access 38.3.0, licensed under EUPL v1.2
+	Copyright (C) 2012-2026 mgm technology partners GmbH
+	Source: https://github.com/mgm-tp
+- @com.mgmtp.a12.devtools/codemod 1.0.0, licensed under EUPL v1.2
+	Copyright (C) 2012-2026 mgm technology partners GmbH
+	Source: https://github.com/mgm-tp
+- @com.mgmtp.a12.devtools/devtools 10.0.1, licensed under EUPL v1.2
+	Copyright (C) 2012-2026 mgm technology partners GmbH
+	Source: https://github.com/mgm-tp
+- @com.mgmtp.a12.devtools/eslint-config 2.0.0, licensed under EUPL v1.2
+	Copyright (C) 2012-2026 mgm technology partners GmbH
+	Source: https://github.com/mgm-tp
+- @com.mgmtp.a12.devtools/prettier-config 1.0.0, licensed under EUPL v1.2
+	Copyright (C) 2012-2026 mgm technology partners GmbH
+	Source: https://github.com/mgm-tp
+- @com.mgmtp.a12.kernel/kernel-core-runtime-api-ts 30.7.0, licensed under EUPL v1.2
+	Copyright (C) 2012-2026 mgm technology partners GmbH
+	Source: https://github.com/mgm-tp
+- @com.mgmtp.a12.kernel/kernel-md-facade 30.7.0, licensed under EUPL v1.2
+	Copyright (C) 2012-2026 mgm technology partners GmbH
+	Source: https://github.com/mgm-tp
+- @com.mgmtp.a12.utils/utils-connector 8.1.0, licensed under EUPL v1.2
+	Copyright (C) 2012-2026 mgm technology partners GmbH
+	Source: https://github.com/mgm-tp
+- @com.mgmtp.a12.utils/utils-localization 7.1.0, licensed under EUPL v1.2
+	Copyright (C) 2012-2026 mgm technology partners GmbH
+	Source: https://github.com/mgm-tp
+- @com.mgmtp.a12.utils/utils-localization-react 7.1.0, licensed under EUPL v1.2
+	Copyright (C) 2012-2026 mgm technology partners GmbH
+	Source: https://github.com/mgm-tp
+- @com.mgmtp.a12.utils/utils-logging 6.1.0, licensed under EUPL v1.2
+	Copyright (C) 2012-2026 mgm technology partners GmbH
+	Source: https://github.com/mgm-tp
+- @com.mgmtp.a12.widgets/widgets-core 38.2.0, licensed under EUPL v1.2
+	Copyright (C) 2012-2026 mgm technology partners GmbH
+	Source: https://github.com/mgm-tp
+- core-js 3.40.0, licensed under MIT
+	Copyright (c) 2014-2025 Denis Pushkarev
+	Source: https://github.com/zloirock/core-js
+- cross-env 7.0.3, licensed under MIT
+	Copyright (c) 2017 Kent C. Dodds
+	Source: https://github.com/kentcdodds/cross-env
+- css-loader 7.1.2, licensed under MIT
+	Copyright JS Foundation and other contributors
+	Source: https://github.com/webpack-contrib/css-loader
+- cypress 14.5.2, licensed under MIT
+	Copyright (c) 2023 Cypress.io
+	Source: https://github.com/cypress-io/cypress
+- cypress-terminal-report 7.1.0, licensed under MIT
+	Copyright (c) 2020 Fodor Zoltan
+	Source: https://github.com/archfz/cypress-terminal-report
+- @cypress/webpack-preprocessor 6.0.2, licensed under MIT
+	Copyright (c) 2017 Cypress.io https://cypress.io
+	Source: https://github.com/cypress-io/cypress
+- @dagrejs/dagre 1.1.5, licensed under MIT
+	Copyright (c) 2012-2014 Chris Pettitt
+	Source: https://github.com/dagrejs/dagre
+- depcheck 1.4.7, licensed under MIT
+	Copyright 2015 Djordje Lukic, Junle Li
+	Source: https://github.com/depcheck/depcheck
+- esbuild-loader 4.3.0, licensed under MIT
+	Copyright (c) Hiroki Osame <hiroki.osame@gmail.com>
+	Source: https://github.com/privatenumber/esbuild-loader
+- eslint 9.21.0, licensed under MIT
+	Copyright OpenJS Foundation and other contributors, <www.openjsf.org>
+	Source: https://github.com/eslint/eslint
+- eslint-config-prettier 10.0.2, licensed under MIT
+	Copyright (c) 2017, 2018, 2019, 2020, 2021, 2022, 2023 Simon Lydell and contributors
+	Source: https://github.com/prettier/eslint-config-prettier
+- eslint-plugin-chai-friendly 1.0.1, licensed under MIT
+	Copyright (c) 2016 Ihor Diachenko
+	Source: https://github.com/ihordiachenko/eslint-plugin-chai-friendly
+- eslint-plugin-import 2.31.0, licensed under MIT
+	Copyright (c) 2015 Ben Mosher
+	Source: https://github.com/import-js/eslint-plugin-import
+- eslint-plugin-notice 1.0.0, licensed under MIT
+	Copyright (c) 2017 Nick Deis
+	Source: https://github.com/nickdeis/eslint-plugin-notice
+- eslint-plugin-prettier 5.2.3, licensed under MIT
+	Copyright (c) 2017 Andres Suarez and Teddy Katz
+	Source: https://github.com/prettier/eslint-plugin-prettier
+- eslint-plugin-react 7.37.4, licensed under MIT
+	Copyright (c) 2014 Yannick Croissant
+	Source: https://github.com/jsx-eslint/eslint-plugin-react
+- eslint-plugin-react-hooks 5.1.0, licensed under MIT
+	Copyright (c) Meta Platforms, Inc. and affiliates
+	Source: https://github.com/facebook/react/tree/main/packages/eslint-plugin-react-hooks
+- file-saver 2.0.5, licensed under MIT
+	Copyright (c) 2016 Eli Grey
+	Source: https://github.com/eligrey/FileSaver.js
+- html-webpack-plugin 5.6.3, licensed under MIT
+	Copyright JS Foundation and other contributors
+	Source: https://github.com/jantimon/html-webpack-plugin
+- immer 9.0.21, licensed under MIT
+	Copyright (c) 2017 Michel Weststrate
+	Source: https://github.com/immerjs/immer
+- lodash 4.17.21, licensed under MIT
+	Copyright OpenJS Foundation and other contributors <https://openjsf.org/> and copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors <http://underscorejs.org/>
+	Source: https://github.com/lodash/lodash
+- mini-css-extract-plugin 2.9.2, licensed under MIT
+	Copyright JS Foundation and other contributors
+	Source: https://github.com/webpack-contrib/mini-css-extract-plugin
+- prettier 3.5.2, licensed under MIT
+	Copyright © James Long and contributors
+	Source: https://github.com/prettier/prettier
+- react 19.0.0, licensed under MIT
+	Copyright (c) Meta Platforms, Inc. and affiliates
+	Source: https://github.com/facebook/react
+- react-dom 19.0.0, licensed under MIT
+	Copyright (c) Meta Platforms, Inc. and affiliates
+	Source: https://github.com/facebook/react
+- react-redux 7.2.9, licensed under MIT
+	Copyright (c) 2015-present Dan Abramov
+	Source: https://github.com/reduxjs/react-redux
+- redux 4.2.1, licensed under MIT
+	Copyright (c) 2015-present Dan Abramov
+	Source: https://github.com/reduxjs/redux
+- @redux-devtools/extension 3.3.0, licensed under MIT
+	Copyright (c) 2015-present Dan Abramov
+	Source: https://github.com/reduxjs/redux-devtools
+- @reduxjs/toolkit 1.9.7, licensed under MIT
+	Copyright (c) 2018 Mark Erikson
+	Source: https://github.com/reduxjs/redux-toolkit
+- source-map-loader 5.0.0, licensed under MIT
+	Copyright JS Foundation and other contributors
+	Source: https://github.com/webpack-contrib/source-map-loader
+- styled-components 6.1.16, licensed under MIT
+	Copyright (c) 2016-present Glen Maddern and Maximilian Stoiber
+	Source: https://github.com/styled-components/styled-components
+- @svgr/webpack 8.1.0, licensed under MIT
+	Copyright 2017 Smooth Code
+	Source: https://github.com/gregberge/svgr
+- terser-webpack-plugin 5.3.12, licensed under MIT
+	Copyright JS Foundation and other contributors
+	Source: https://github.com/webpack-contrib/terser-webpack-plugin
+- ts-node 10.9.2, licensed under MIT
+	Copyright (c) 2014 Blake Embrey (hello@blakeembrey.com)
+	Source: https://github.com/TypeStrong/ts-node
+- typed-redux-saga 1.5.0, licensed under MIT
+	Copyright (c) 2019 Agile Digital
+	Source: https://github.com/agiledigital/typed-redux-saga
+- typescript 5.8.3, licensed under Apache-2.0
+	Copyright (c) Microsoft Corporation
+	Source: https://github.com/microsoft/TypeScript
+- typescript-eslint 8.25.0, licensed under MIT
+	Copyright (c) 2019 typescript-eslint and other contributors
+	Source: https://github.com/typescript-eslint/typescript-eslint
+- @types/file-saver 2.0.7, licensed under MIT
+	Copyrights are respective of each contributor listed at the beginning of each definition file
+	Source: https://github.com/DefinitelyTyped/DefinitelyTyped
+- @types/lodash 4.17.15, licensed under MIT
+	Copyrights are respective of each contributor listed at the beginning of each definition file
+	Source: https://github.com/DefinitelyTyped/DefinitelyTyped
+- @types/node 20.12.8, licensed under MIT
+	Copyright Node.js contributors
+	Source: https://github.com/DefinitelyTyped/DefinitelyTyped
+- @types/react 19.0.10, licensed under MIT
+	Copyrights are respective of each contributor listed at the beginning of each definition file
+	Source: https://github.com/DefinitelyTyped/DefinitelyTyped
+- @types/react-dom 19.0.0, licensed under MIT
+	Copyrights are respective of each contributor listed at the beginning of each definition file
+	Source: https://github.com/DefinitelyTyped/DefinitelyTyped
+- @types/react-redux 7.1.33, licensed under MIT
+	Copyrights are respective of each contributor listed at the beginning of each definition file
+	Source: https://github.com/DefinitelyTyped/DefinitelyTyped
+- @types/wicg-file-system-access 2023.10.5, licensed under MIT
+	Copyrights are respective of each contributor listed at the beginning of each definition file
+	Source: https://github.com/DefinitelyTyped/DefinitelyTyped
+- uuid 11.1.0, licensed under MIT
+	Copyright (c) 2010-2020 Robert Kieffer and other contributors
+	Source: https://github.com/uuidjs/uuid
+- vitest 3.2.4, licensed under MIT
+	Copyright (c) 2021-Present Vitest Team
+	Source: https://github.com/vitest-dev/vitest
+- @vitest/coverage-v8 3.2.4, licensed under MIT
+	Copyright (c) 2021-Present Vitest Team
+	Source: https://github.com/vitest-dev/vitest
+- wait-on 8.0.2, licensed under MIT
+	Copyright (c) 2015 Jeff Barczewski
+	Source: https://github.com/jeffbski/wait-on
+- webpack 5.98.0, licensed under MIT
+	Copyright JS Foundation and other contributors
+	Source: https://github.com/webpack/webpack
+- webpack-cli 6.0.1, licensed under MIT
+	Copyright JS Foundation and other contributors
+	Source: https://github.com/webpack/webpack-cli
+- webpack-dev-server 5.2.0, licensed under MIT
+	Copyright JS Foundation and other contributors
+	Source: https://github.com/webpack/webpack-dev-server
+- webpack-merge 6.0.1, licensed under MIT
+	Copyright (c) 2015 Juho Vepsalainen
+	Source: https://github.com/survivejs/webpack-merge
+
+
+License Texts
+-------------
+
+Complete license texts for all included third-party components can
+be found in the licenses/ directory, attributions in file NOTICES.
+
+
+General Notice
+--------------
+
+The mgm A12 Platform is dual-licensed under the EUPL-1.2 or a
+commercial license. Third-party components remain under their
+respective licenses. For details, see the file LICENSE.
+
+“mgm A12” is a registered trademark of mgm technology partners GmbH
+(EU/DE). All other trademarks are the property of their respective
+owners.
+
+End of THIRD_PARTY_NOTICES
