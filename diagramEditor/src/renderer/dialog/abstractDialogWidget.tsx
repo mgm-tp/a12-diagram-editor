@@ -30,15 +30,13 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { memo } from "react";
 
 import { assertExists } from "../../core/assertions";
 
 import { useDiagramState } from "../store/stateContext";
 
-import { DialogWidgetMap } from "./dialogWidgetMap";
+import type { DialogWidgetMap } from "./dialogWidgetMap";
 
 interface AbstractNodeWidgetProps {
 	dialogWidgetMap: DialogWidgetMap;

@@ -32,11 +32,12 @@
 
 import { useContext, useState } from "react";
 import styled from "styled-components";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import { HintTooltip, Select } from "@com.mgmtp.a12.widgets/widgets-core";
-import { ActivityActions, ActivityMap, ActivitySelectors } from "@com.mgmtp.a12.client/client-core/lib/core/activity";
-import { FrameViews } from "@com.mgmtp.a12.client/client-core";
+import { ActivityActions, ActivityMap, ActivitySelectors, FrameViews } from "@com.mgmtp.a12.client/client-core";
+
+import { useSelector } from "../hooks";
 
 import { DiagramElementsBox } from "./elementsBox";
 

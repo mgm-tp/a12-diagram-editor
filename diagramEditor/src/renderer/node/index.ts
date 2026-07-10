@@ -29,8 +29,8 @@
  * NON-INFRINGEMENT, EXCEPT WHERE SUCH DISCLAIMERS ARE HELD TO BE
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
-export * from './nodeWidget';
-export * from './abstractNodeWidget';
-export * from './nodeLayer';
-export * from './nodeEventHandlers';
-export * from './nodeWidgetMap';
+export * from "./nodeWidget";
+export * from "./abstractNodeWidget";
+export * from "./nodeLayer";
+export * from "./nodeEventHandlers";
+export * from "./nodeWidgetMap";

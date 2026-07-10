@@ -30,17 +30,20 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
 
-import { createDiagramNode } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/diagram/node";
-import { getDiagramPosition } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/renderer/utils/coordinateConversion";
-import { getCanvasPosition } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/renderer/utils/htmlHelper";
-import { a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/a12Client/a12DiagramActions";
-import { createDiagramContainer } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/diagram/container";
+import {
+	createDiagramNode,
+	getDiagramPosition,
+	getCanvasPosition,
+	a12DiagramActions,
+	createDiagramContainer
+} from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 import { selectDiagramState } from "../examples/store";
 import { useActivityId } from "../examples/activityIdContext";
+import { useSelector } from "../hooks";
 
 interface DropAreaProps {
 	children: React.ReactNode;

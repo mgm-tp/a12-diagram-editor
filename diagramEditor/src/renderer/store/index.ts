@@ -29,7 +29,7 @@
  * NON-INFRINGEMENT, EXCEPT WHERE SUCH DISCLAIMERS ARE HELD TO BE
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
-export * from './slice';
-export * from './reducer';
-export * from './stateContext';
-export * from './configuration';
+export * from "./slice";
+export * from "./reducer";
+export * from "./stateContext";
+export * from "./configuration";

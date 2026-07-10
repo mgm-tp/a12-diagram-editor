@@ -30,11 +30,10 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import * as Path from "path";
 
 import TerserPlugin from "terser-webpack-plugin";
-import * as Webpack from "webpack";
+import type * as Webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 
@@ -97,7 +96,7 @@ const commonConfig: Webpack.Configuration = {
 			}
 		]
 	},
-	entry: ["./src/index.tsx", "@com.mgmtp.a12.widgets/widgets-core/lib/theme/basic.css"],
+	entry: ["./src/index.tsx", "@com.mgmtp.a12.widgets/widgets-core/styles/basic.css"],
 	resolve: {
 		extensions: [".js", ".ts", ".tsx"],
 		alias: {

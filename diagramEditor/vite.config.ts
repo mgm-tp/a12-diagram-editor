@@ -30,7 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({

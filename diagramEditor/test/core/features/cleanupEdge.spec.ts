@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { removeDuplicatedAnchors, removeCollinearSegments } from "../../../src/core/features/cleanUpEdge";
 import { createConnectedEdge } from "../../utils/diagramStateHelper";
 

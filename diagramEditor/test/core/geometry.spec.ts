@@ -30,13 +30,12 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 /**
  * @fileoverview Tests for geometry functions
  */
 
-import { isSamePoint, isRightAngle, isOrthogonalLine, Point, Line, calculateAngle } from "../../src/core/geometry";
+import type { Point, Line } from "../../src/core/geometry";
+import { isSamePoint, isRightAngle, isOrthogonalLine, calculateAngle } from "../../src/core/geometry";
 
 describe("Geometry", () => {
 	describe("isSamePoint", () => {

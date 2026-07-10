@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { StackingLayer } from "../common/stackingLayer";
 import { useDiagramState } from "../store/stateContext";
 

@@ -30,9 +30,7 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { AnyAction } from "@reduxjs/toolkit";
+import type { UnknownAction } from "@reduxjs/toolkit";
 
 import { diagramActions } from "../renderer/store/slice";
 
@@ -50,11 +48,11 @@ type FirstArgumentType<AnyFunction> = AnyFunction extends (first: infer FirstArg
  * Extends an action creator function to include `activityId` in its payload. Considers if the payload type equals void
  * and returns an object with only activityId then.
  */
-type ActionCreatorWithActivityId<AnyActionCreator> = (
-	action: FirstArgumentType<AnyActionCreator> extends void
+type ActionCreatorWithActivityId<UnknownActionCreator> = (
+	action: FirstArgumentType<UnknownActionCreator> extends void
 		? { activityId: string }
-		: FirstArgumentType<AnyActionCreator> & { activityId: string }
-) => AnyAction;
+		: FirstArgumentType<UnknownActionCreator> & { activityId: string }
+) => UnknownAction;
 
 /**
  * This type maps each typed key to its corresponding action creator
@@ -64,8 +62,8 @@ type ActionCreatorWithActivityId<AnyActionCreator> = (
  *
  * @example
  * const actions = {
- *  action1: (payload: { data: string }) => AnyAction,
- *  action2: (payload: { id: number }) => AnyAction
+ *  action1: (payload: { data: string }) => UnknownAction,
+ *  action2: (payload: { id: number }) => UnknownAction
  * }
  *
  * type ExtendedActions = ExtendActionMapWithActivityId<typeof actions>;

@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 export function assertExists(candidate: unknown, message: string): asserts candidate {
 	if (candidate === undefined || candidate === null) {
 		throw Error(`Assertion error: ${message}`);

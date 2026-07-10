@@ -30,11 +30,10 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { requireArgument } from "../assertions";
-import { Diagram } from "../diagram/diagram";
-import { isConnectedEdge, UnconnectedDiagramEdge } from "../diagram/edge";
+import type { Diagram } from "../diagram/diagram";
+import type { UnconnectedDiagramEdge } from "../diagram/edge";
+import { isConnectedEdge } from "../diagram/edge";
 import { isReadonly } from "../state";
 
 export function canEdgeDisconnect(edgeId: string, readOnlyElements: Record<string, boolean>): boolean {

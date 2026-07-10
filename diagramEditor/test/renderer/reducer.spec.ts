@@ -30,10 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import { defaultDiagramReducer, diagramActions } from "../../src/renderer/store/slice";
-import { DiagramState } from "../../src/core/state";
-import { ConnectedDiagramEdge, UnconnectedDiagramEdge } from "../../src/core/diagram/edge";
+import type { DiagramState } from "../../src/core/state";
+import type { ConnectedDiagramEdge, UnconnectedDiagramEdge } from "../../src/core/diagram/edge";
 
 import {
 	createConnectedEdge,

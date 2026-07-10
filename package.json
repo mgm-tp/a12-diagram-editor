@@ -13,9 +13,10 @@
 		"test": "pnpm --filter @com.mgmtp.a12.diagrameditor/diagrameditor test"
 	},
 	"devDependencies": {
+		"@com.mgmtp.a12.devtools/tsconfig": "catalog:",
 		"@com.mgmtp.a12.devtools/eslint-config": "catalog:",
 		"@com.mgmtp.a12.devtools/prettier-config": "catalog:",
-		"@com.mgmtp.a12.devtools/tsconfig": "catalog:",
+		"@types/node": "catalog:",
 		"eslint": "catalog:",
 		"depcheck": "catalog:",
 		"eslint-config-prettier": "catalog:",
@@ -26,10 +27,12 @@
 		"eslint-plugin-react": "catalog:",
 		"eslint-plugin-react-hooks": "catalog:",
 		"prettier": "catalog:",
+		"react-redux": "catalog:",
 		"typescript-eslint": "catalog:",
 		"typescript": "catalog:"
 	},
 	"pnpm": {
+		"neverBuiltDependencies": [],
 		"overrides": {
 			"@isaacs/brace-expansion": "catalog:"
 		}

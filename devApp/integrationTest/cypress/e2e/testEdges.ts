@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import {
 	getDiagramEdgeById,
 	getDiagramEdgeByLabel,
@@ -83,14 +81,14 @@ describe("Edges", () => {
 
 	describe("Labels", () => {
 		const edgeEditorSelector = "#edge-properties-editor";
-		const textLineSelector = "[data-role='textline']";
+		const textFieldSelector = "[data-role='text-field-input']";
 
 		it("should be possible to add and remove labels", () => {
 			getDiagramEdgeById(ids.edge1).click({ force: true });
-			cy.get(edgeEditorSelector).find(textLineSelector).eq(0).type("Middle");
-			cy.get(edgeEditorSelector).find(textLineSelector).eq(1).type("Middle Subtext");
-			cy.get(edgeEditorSelector).find(textLineSelector).eq(2).type("First");
-			cy.get(edgeEditorSelector).find(textLineSelector).eq(3).type("First Subtext");
+			cy.get(edgeEditorSelector).find(textFieldSelector).eq(0).type("Middle");
+			cy.get(edgeEditorSelector).find(textFieldSelector).eq(1).type("Middle Subtext");
+			cy.get(edgeEditorSelector).find(textFieldSelector).eq(2).type("First");
+			cy.get(edgeEditorSelector).find(textFieldSelector).eq(3).type("First Subtext");
 			getDiagramEdgeByLabel("Middle").should("exist");
 			getDiagramEdgeByLabel("Middle Subtext").should("exist");
 			getDiagramEdgeByLabel("First").should("exist");

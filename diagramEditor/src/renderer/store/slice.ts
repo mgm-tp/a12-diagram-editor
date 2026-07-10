@@ -30,14 +30,14 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import "immer";
 
-import { createSlice, DeepPartial, PayloadAction } from "@reduxjs/toolkit";
+import type { PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { merge } from "lodash";
 
-import { Diagram } from "../../core/diagram/diagram";
-import { DiagramEdge, UnconnectedDiagramEdge } from "../../core/diagram/edge";
+import type { Diagram } from "../../core/diagram/diagram";
+import type { DiagramEdge, UnconnectedDiagramEdge } from "../../core/diagram/edge";
 import { centerCanvas, centerNode } from "../../core/features/centerElements";
 import { connectEdge } from "../../core/features/connectEdge";
 import { disconnectEdge } from "../../core/features/disconnectEdge";
@@ -48,29 +48,23 @@ import { moveSegment } from "../../core/features/moveEdgeSegment";
 import { panCanvas } from "../../core/features/panCanvas";
 import { removeElements } from "../../core/features/removeElements";
 import { applyZoom } from "../../core/features/zoomCanvas";
-import {
-	DiagramState,
-	insertContainer,
-	insertEdge,
-	insertNode,
-	UIState,
-	updateContainer,
-	updateEdge,
-	updateNode
-} from "../../core/state";
+import type { DiagramState, UIState } from "../../core/state";
+import { insertContainer, insertEdge, insertNode, updateContainer, updateEdge, updateNode } from "../../core/state";
 import { generateId } from "../../core/generateId";
 import { layoutDiagram } from "../../core/features/layout";
-import { Area, Point, Rectangle, Vector } from "../../core/geometry";
+import type { Area, Point, Rectangle, Vector } from "../../core/geometry";
 import { selectElementsInArea, toggleSelectedElement } from "../../core/features/multiSelection";
-import { DiagramNode } from "../../core/diagram/node";
+import type { DiagramNode } from "../../core/diagram/node";
 import { moveEdgeAnchor, moveEdgeAnchorEnded } from "../../core/features/moveEdgeAnchor";
 import { moveElementToBackground, moveElementToForeground } from "../../core/features/setElementOrder";
 import { moveContainer } from "../../core/features/moveContainer";
 import { addElementToContainer } from "../../core/features/addElementToContainer";
 import { removeElementFromContainer } from "../../core/features/removeElementFromContainer";
-import { resizeElement, ResizePointOrientation } from "../../core/features/resizeElement";
-import { DiagramContainer } from "../../core/diagram/container";
+import type { ResizePointOrientation } from "../../core/features/resizeElement";
+import { resizeElement } from "../../core/features/resizeElement";
+import type { DiagramContainer } from "../../core/diagram/container";
 import { setElementReadonly, unsetElementReadonly } from "../../core/features/setElementsReadonly";
+import type { DeepPartial } from "../../core/types";
 
 export function createDiagramState(uiState?: Partial<UIState>, diagram?: Partial<Diagram>): DiagramState {
 	return {

@@ -30,10 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
+import type { MouseEvent, WheelEvent } from "react";
 
-import { MouseEvent, WheelEvent } from "react";
-
-import { Point, Vector } from "../../core/geometry";
+import type { Point, Vector } from "../../core/geometry";
 
 import { diagramActions } from "../store/slice";
 import { useDiagramDispatch } from "../store/stateContext";
@@ -46,6 +45,7 @@ export interface CanvasEventHandlers {
 	onCanvasDragged: (event: MouseEvent, vector: Vector) => void;
 	onCanvasZoomed: (event: WheelEvent, scrollDelta: number, diagramPosition: Point) => void;
 	onCanvasDragEnded: () => void;
+	onCanvasContextMenu: (event: MouseEvent) => void;
 }
 
 export function useCanvasEventHandlers(): CanvasEventHandlers {
@@ -64,6 +64,9 @@ export function useDefaultCanvasEventHandlers(): CanvasEventHandlers {
 		onCanvasZoomed: (event, scrollDelta, diagramPosition) =>
 			dispatch(diagramActions.canvasZoomed({ scrollDelta, diagramPosition })),
 		onCanvasDragged: (event, vector) => dispatch(diagramActions.canvasDragged({ vector })),
-		onCanvasDragEnded: () => {}
+		onCanvasDragEnded: () => {},
+		onCanvasContextMenu: event => {
+			event.preventDefault();
+		}
 	};
 }

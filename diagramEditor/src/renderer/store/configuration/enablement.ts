@@ -30,35 +30,28 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
+import type { UnknownAction } from "@reduxjs/toolkit";
 
-
-import { AnyAction } from "@reduxjs/toolkit";
-
-import {
-	Anchor,
-	ConnectedDiagramEdge,
-	isConnectedEdge,
-	isUnconnectedEdge,
-	UnconnectedDiagramEdge
-} from "../../../core/diagram/edge";
-import { Vector } from "../../../core/geometry";
-import { DiagramState } from "../../../core/state";
-import { DiagramNode } from "../../../core/diagram/node";
-import { DiagramElement } from "../../../core/diagram/diagramElement";
-import { DiagramPort } from "../../../core/diagram/port";
+import type { Anchor, ConnectedDiagramEdge, UnconnectedDiagramEdge } from "../../../core/diagram/edge";
+import { isConnectedEdge, isUnconnectedEdge } from "../../../core/diagram/edge";
+import type { Vector } from "../../../core/geometry";
+import type { DiagramState } from "../../../core/state";
+import type { DiagramNode } from "../../../core/diagram/node";
+import type { DiagramElement } from "../../../core/diagram/diagramElement";
+import type { DiagramPort } from "../../../core/diagram/port";
 import { assertExists, requireArgument } from "../../../core/assertions";
 import { canElementMove } from "../../../core/features/moveElements";
 import { canNodeMove } from "../../../core/features/moveNode";
 import { canSegmentMove } from "../../../core/features/moveEdgeSegment";
-import { DiagramDialog } from "../../../core/features/dialog";
+import type { DiagramDialog } from "../../../core/features/dialog";
 import { canEdgeDisconnect } from "../../../core/features/disconnectEdge";
 import { canMoveEdgeEnd } from "../../../core/features/moveEdgeEnd";
 import { canMoveEdgeAnchor } from "../../../core/features/moveEdgeAnchor";
-import { DiagramContainer } from "../../../core/diagram/container";
+import type { DiagramContainer } from "../../../core/diagram/container";
 import { canAddElementToContainer } from "../../../core/features/addElementToContainer";
 import { canContainerMove } from "../../../core/features/moveContainer";
 import { canRemoveElementFromContainer } from "../../../core/features/removeElementFromContainer";
-import { ResizePointOrientation } from "../../../core/features/resizeElement";
+import type { ResizePointOrientation } from "../../../core/features/resizeElement";
 
 import { diagramActions } from "../slice";
 
@@ -136,7 +129,7 @@ export type DiagramEnablementMap = Partial<RequiredDiagramEnablementMap>;
  * @internal
  */
 export function resolveEnablement(
-	action: AnyAction,
+	action: UnknownAction,
 	state: DiagramState,
 	enablements: DiagramEnablementMap
 ): DiagramEnablement {
@@ -173,7 +166,7 @@ export function resolveEnablement(
 }
 
 function resolveCanvasZoomedEnablement(
-	action: AnyAction,
+	action: UnknownAction,
 	state: DiagramState,
 	enablements: DiagramEnablementMap
 ): DiagramEnablement {
@@ -184,7 +177,7 @@ function resolveCanvasZoomedEnablement(
 }
 
 function resolveCanvasDraggedEnablement(
-	action: AnyAction,
+	action: UnknownAction,
 	state: DiagramState,
 	enablements: DiagramEnablementMap
 ): DiagramEnablement {
@@ -195,7 +188,7 @@ function resolveCanvasDraggedEnablement(
 }
 
 function resolveNodeMovedEnablement(
-	action: AnyAction,
+	action: UnknownAction,
 	state: DiagramState,
 	enablements: DiagramEnablementMap
 ): DiagramEnablement {
@@ -214,7 +207,7 @@ function resolveNodeMovedEnablement(
 }
 
 function resolveElementsAddedToContainerEnablement(
-	action: AnyAction,
+	action: UnknownAction,
 	state: DiagramState,
 	enablements: DiagramEnablementMap
 ): DiagramEnablement {
@@ -238,7 +231,7 @@ function resolveElementsAddedToContainerEnablement(
 }
 
 function resolveElementsRemovedFromContainerEnablement(
-	action: AnyAction,
+	action: UnknownAction,
 	state: DiagramState,
 	enablements: DiagramEnablementMap
 ): DiagramEnablement {
@@ -263,7 +256,7 @@ function resolveElementsRemovedFromContainerEnablement(
 }
 
 function resolveContainerMovedEnablement(
-	action: AnyAction,
+	action: UnknownAction,
 	state: DiagramState,
 	enablements: DiagramEnablementMap
 ): DiagramEnablement {
@@ -279,7 +272,7 @@ function resolveContainerMovedEnablement(
 }
 
 function resolveSegmentMovedEnablement(
-	action: AnyAction,
+	action: UnknownAction,
 	state: DiagramState,
 	enablements: DiagramEnablementMap
 ): DiagramEnablement {
@@ -300,7 +293,7 @@ function resolveSegmentMovedEnablement(
 }
 
 function resolveElementsMovedEnablement(
-	action: AnyAction,
+	action: UnknownAction,
 	state: DiagramState,
 	enablements: DiagramEnablementMap
 ): DiagramEnablement {
@@ -321,7 +314,7 @@ function resolveElementsMovedEnablement(
 }
 
 function resolveEdgeConnectedEnablement(
-	action: AnyAction,
+	action: UnknownAction,
 	state: DiagramState,
 	enablements: DiagramEnablementMap
 ): DiagramEnablement {
@@ -340,7 +333,7 @@ function resolveEdgeConnectedEnablement(
 }
 
 function resolveCreateEdgeEnablement(
-	action: AnyAction,
+	action: UnknownAction,
 	state: DiagramState,
 	enablements: DiagramEnablementMap
 ): DiagramEnablement {
@@ -361,7 +354,7 @@ function resolveCreateEdgeEnablement(
 }
 
 function resolveEdgeDisconnectedEnablement(
-	action: AnyAction,
+	action: UnknownAction,
 	state: DiagramState,
 	enablements: DiagramEnablementMap
 ): DiagramEnablement {
@@ -383,7 +376,7 @@ function resolveEdgeDisconnectedEnablement(
 }
 
 function resolveEdgeEndMovedEnablement(
-	action: AnyAction,
+	action: UnknownAction,
 	state: DiagramState,
 	enablements: DiagramEnablementMap
 ): DiagramEnablement {
@@ -403,7 +396,7 @@ function resolveEdgeEndMovedEnablement(
 }
 
 function resolveEdgeAnchorMovedEnablement(
-	action: AnyAction,
+	action: UnknownAction,
 	state: DiagramState,
 	enablements: DiagramEnablementMap
 ): DiagramEnablement {
@@ -424,7 +417,7 @@ function resolveEdgeAnchorMovedEnablement(
 }
 
 function resolveElementSelectedEnablement(
-	action: AnyAction,
+	action: UnknownAction,
 	state: DiagramState,
 	enablements: DiagramEnablementMap
 ): DiagramEnablement {
@@ -438,7 +431,7 @@ function resolveElementSelectedEnablement(
 }
 
 function resolveElementMultiSelectedEnablement(
-	action: AnyAction,
+	action: UnknownAction,
 	state: DiagramState,
 	enablements: DiagramEnablementMap
 ): DiagramEnablement {
@@ -452,7 +445,7 @@ function resolveElementMultiSelectedEnablement(
 }
 
 function resolveElementsRemovedEnablement(
-	action: AnyAction,
+	action: UnknownAction,
 	state: DiagramState,
 	enablements: DiagramEnablementMap
 ): DiagramEnablement {
@@ -467,7 +460,7 @@ function resolveElementsRemovedEnablement(
 }
 
 function resolveResizeEnablement(
-	action: AnyAction,
+	action: UnknownAction,
 	state: DiagramState,
 	enablements: DiagramEnablementMap
 ): DiagramEnablement {

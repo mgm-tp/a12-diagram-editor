@@ -30,11 +30,10 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { isEdgeContainedInArea } from "../diagram/edge";
-import { Diagram } from "../diagram/diagram";
-import { Area, isRectangleContainedInArea } from "../geometry";
+import type { Diagram } from "../diagram/diagram";
+import type { Area } from "../geometry";
+import { isRectangleContainedInArea } from "../geometry";
 
 export function toggleSelectedElement(selectedElements: Record<string, true>, elementId: string): Record<string, true> {
 	if (selectedElements[elementId]) {

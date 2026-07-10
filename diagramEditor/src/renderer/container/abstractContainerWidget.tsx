@@ -30,22 +30,21 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import styled from "styled-components";
 import { useState } from "react";
 
-import { DiagramContainer } from "../../core/diagram/container";
+import type { DiagramContainer } from "../../core/diagram/container";
 
 import { useElementDragging } from "../common/useElementDragging";
 import { useDiagramState } from "../store/stateContext";
 import { isLeftMouseKey } from "../utils/inputKeys";
 import { ResizePoints } from "../common/resizePoints";
 import { AbstractPortWidget } from "../port/abstractPortWidget";
-import { PortWidgetMap } from "../port/portWidgetMap";
+import type { PortWidgetMap } from "../port/portWidgetMap";
 import { useOrderIndex } from "../common/useOrderIndex";
 import { useCommonEventHandlers } from "../common/commonEventHandlers";
 
-import { ContainerWidgetMap } from "./containerWidgetMap";
+import type { ContainerWidgetMap } from "./containerWidgetMap";
 import { useContainerEventHandlers } from "./containerEventHandlers";
 
 interface AbstractContainerWidgetProps {

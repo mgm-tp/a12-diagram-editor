@@ -30,7 +30,8 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-import { PropsWithChildren, MouseEvent, WheelEvent, useMemo, useRef, MouseEventHandler, useState } from "react";
+import type { PropsWithChildren, MouseEvent, WheelEvent, MouseEventHandler } from "react";
+import { useMemo, useRef, useState } from "react";
 
 import { useDiagramState } from "../store/stateContext";
 import { getDiagramPosition } from "../utils/coordinateConversion";
@@ -81,8 +82,14 @@ function Canvas(props: InternalCanvasProps) {
 	const offset = useDiagramState(state => state.ui.offset);
 	const { addMovementToVector, getVector, subtractCommittedVector, resetVector } = useVector();
 
-	const { onCanvasRightMouseDown, onCanvasDragged, onCanvasDragEnded, onCanvasDoubleClicked, onCanvasZoomed } =
-		useCanvasEventHandlers();
+	const {
+		onCanvasRightMouseDown,
+		onCanvasDragged,
+		onCanvasDragEnded,
+		onCanvasDoubleClicked,
+		onCanvasZoomed,
+		onCanvasContextMenu
+	} = useCanvasEventHandlers();
 	const startPanning = useCanvasDragging(onPan, onPanEnd, "right");
 	const { startDrawingSelectionRectangle, SelectionRectangle } = useSelectionRectangle(
 		onDrawSelection,
@@ -106,7 +113,7 @@ function Canvas(props: InternalCanvasProps) {
 			onWheel={onMouseWheel}
 			onMouseDown={onMouseDown}
 			onDoubleClick={onCanvasDoubleClicked}
-			onContextMenu={e => e.preventDefault()}
+			onContextMenu={onCanvasContextMenu}
 		>
 			{children}
 			{SelectionRectangle}

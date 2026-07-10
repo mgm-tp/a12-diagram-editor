@@ -30,8 +30,7 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-import React from "react";
+import type React from "react";
 
 export function multiSelectKeyPressed(event: React.MouseEvent): boolean {
 	const isMac = navigator.userAgent.toUpperCase().indexOf("MAC") >= 0;

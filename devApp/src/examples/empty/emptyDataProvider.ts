@@ -30,13 +30,11 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { put } from "typed-redux-saga";
 
-import { DataProvider } from "@com.mgmtp.a12.client/client-core/lib/core/data";
-import { createDiagramState } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/renderer/store/slice";
-import { ActivityActions } from "@com.mgmtp.a12.client/client-core/lib/core/activity";
+import type { DataProvider } from "@com.mgmtp.a12.client/client-core";
+import { ActivityActions } from "@com.mgmtp.a12.client/client-core";
+import { createDiagramState } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 export const emptyDataProvider: DataProvider = {
 	name: "emptyDataProvider",

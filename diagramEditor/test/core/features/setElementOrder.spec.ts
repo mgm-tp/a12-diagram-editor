@@ -30,10 +30,8 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { moveElementToBackground, moveElementToForeground } from "../../../src/core/features/setElementOrder";
-import { UIState } from "../../../src/core/state";
+import type { UIState } from "../../../src/core/state";
 import { createDiagramState } from "../../utils/diagramStateHelper";
 
 describe("setElementOrder", () => {

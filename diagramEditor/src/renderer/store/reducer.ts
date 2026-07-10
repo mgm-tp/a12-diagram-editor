@@ -30,14 +30,14 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { Action } from "@reduxjs/toolkit";
+import type { Action } from "@reduxjs/toolkit";
 
 import { isConfirmedAction } from "../../core/features/dialog";
-import { DiagramState, restoreBackup } from "../../core/state";
+import type { DiagramState } from "../../core/state";
+import { restoreBackup } from "../../core/state";
 
-import { resolveEnablement, DiagramEnablementMap, isConfirmationRequiredEnablement } from "./configuration/enablement";
+import type { DiagramEnablementMap } from "./configuration/enablement";
+import { resolveEnablement, isConfirmationRequiredEnablement } from "./configuration/enablement";
 import { createDiagramState, defaultDiagramReducer } from "./slice";
 
 export type DiagramStateReducer = (state: DiagramState, action: Action) => DiagramState;

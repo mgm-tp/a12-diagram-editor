@@ -30,9 +30,7 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { DiagramContainer } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/diagram/container";
+import type { DiagramContainer } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 import { assertDiagramState } from "./utils";
 

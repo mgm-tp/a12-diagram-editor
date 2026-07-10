@@ -30,7 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import { applyZoom } from "../../../src/core/features/zoomCanvas";
 import { createDiagramState } from "../../utils/diagramStateHelper";
 

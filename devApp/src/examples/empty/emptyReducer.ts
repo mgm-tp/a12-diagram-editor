@@ -30,11 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { Activity, ActivityReducers } from "@com.mgmtp.a12.client/client-core/lib/core/activity";
-import { DiagramState } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/state";
-import { createDiagramReducer } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/renderer/store/reducer";
+import type { Activity, ActivityReducers } from "@com.mgmtp.a12.client/client-core";
+import type { DiagramState } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
+import { createDiagramReducer } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 function isEmptyDiagramDataHolder(dh: Activity.DataHolder): dh is Activity.DataHolder {
 	return dh.descriptor.diagram === "empty";

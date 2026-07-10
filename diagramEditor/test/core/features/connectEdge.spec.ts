@@ -30,10 +30,8 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { connectEdge } from "../../../src/core/features/connectEdge";
-import { ConnectedDiagramEdge } from "../../../src/core/diagram/edge";
+import type { ConnectedDiagramEdge } from "../../../src/core/diagram/edge";
 import {
 	createConnectedEdge,
 	createDiagramState,

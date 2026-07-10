@@ -30,8 +30,7 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-import webpack from "webpack";
+import type webpack from "webpack";
 import merge from "webpack-merge";
 
 import commonConfig from "./webpack.common";

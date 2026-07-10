@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { assertNodeProperties, getDiagramNodeById, getDiagramNodeByLabel, moveNode } from "./utils/nodeUtils";
 import { assertUiState, confirmRemoveDialog, multiSelectElement, setDiagramReadonly } from "./utils/utils";
 

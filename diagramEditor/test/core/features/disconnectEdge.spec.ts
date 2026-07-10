@@ -30,10 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { disconnectEdge } from "../../../src/core/features/disconnectEdge";
-import { isUnconnectedEdge, UnconnectedDiagramEdge } from "../../../src/core/diagram/edge";
+import type { UnconnectedDiagramEdge } from "../../../src/core/diagram/edge";
+import { isUnconnectedEdge } from "../../../src/core/diagram/edge";
 import { requireArgument } from "../../../src/core/assertions";
 import { createConnectedEdge, createDiagramState, createNode } from "../../utils/diagramStateHelper";
 

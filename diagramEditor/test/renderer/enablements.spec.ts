@@ -30,12 +30,11 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import { createDiagramReducer } from "../../src/renderer/store/reducer";
 import { diagramActions } from "../../src/renderer/store/slice";
-import { DiagramDialog } from "../../src/core/features/dialog";
-import { ConnectedDiagramEdge, UnconnectedDiagramEdge } from "../../src/core/diagram/edge";
-import { DiagramNode } from "../../src/core/diagram/node";
+import type { DiagramDialog } from "../../src/core/features/dialog";
+import type { ConnectedDiagramEdge, UnconnectedDiagramEdge } from "../../src/core/diagram/edge";
+import type { DiagramNode } from "../../src/core/diagram/node";
 
 import {
 	createDiagramState,

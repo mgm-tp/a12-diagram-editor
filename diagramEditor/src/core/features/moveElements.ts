@@ -30,11 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { resolveContainedElements } from "../diagram/container";
-import { Diagram } from "../diagram/diagram";
-import { Vector } from "../geometry";
+import type { Diagram } from "../diagram/diagram";
+import type { Vector } from "../geometry";
 import { isContainer, isEdge, isNode } from "../state";
 
 import { canContainerMove, moveContainer } from "./moveContainer";

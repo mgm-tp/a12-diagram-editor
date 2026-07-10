@@ -30,14 +30,13 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { uniqueId } from "lodash";
 
-import { Diagram } from "../diagram/diagram";
-import { isHorizontalLine, Vector } from "../geometry";
+import type { Diagram } from "../diagram/diagram";
+import type { Vector } from "../geometry";
+import { isHorizontalLine } from "../geometry";
 import { isReadonly } from "../state";
-import { Anchor } from "../diagram/edge";
+import type { Anchor } from "../diagram/edge";
 
 import { cleanUpEdge, removeDuplicatedAnchors } from "./cleanUpEdge";
 

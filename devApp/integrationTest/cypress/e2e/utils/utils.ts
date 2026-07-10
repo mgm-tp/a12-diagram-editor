@@ -30,10 +30,8 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { ActivityMap } from "@com.mgmtp.a12.client/client-core/lib/core/activity";
-import { DiagramState, UIState } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/state";
+import type { ActivityMap } from "@com.mgmtp.a12.client/client-core";
+import type { DiagramState, UIState } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 import { selectDiagramState } from "../../../../src/examples/store";
 

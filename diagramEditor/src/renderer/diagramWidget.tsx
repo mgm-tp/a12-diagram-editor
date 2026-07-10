@@ -30,27 +30,34 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { Dispatch } from "@reduxjs/toolkit";
-import { ReactNode, useMemo } from "react";
+import type { Dispatch } from "@reduxjs/toolkit";
+import type { ReactNode } from "react";
+import { useMemo } from "react";
 
 import { AuxiliaryLinesLayer } from "./auxiliaryLines/auxiliaryLinesLayer";
 import { TransformationLayer } from "./common/transformationLayer";
 import { AbstractDialogWidget } from "./dialog/abstractDialogWidget";
-import { defaultDialogWidgetMap, DialogWidgetMap } from "./dialog/dialogWidgetMap";
+import type { DialogWidgetMap } from "./dialog/dialogWidgetMap";
+import { defaultDialogWidgetMap } from "./dialog/dialogWidgetMap";
 import { EdgeLayer } from "./edge/edgeLayer";
-import { defaultEdgeWidgetMap, EdgeWidgetMap } from "./edge/edgeWidgetMap";
+import type { EdgeWidgetMap } from "./edge/edgeWidgetMap";
+import { defaultEdgeWidgetMap } from "./edge/edgeWidgetMap";
 import { GridLayer } from "./grid/gridLayer";
 import { NodeLayer } from "./node/nodeLayer";
-import { defaultNodeWidgetMap, NodeWidgetMap } from "./node/nodeWidgetMap";
-import { defaultPortWidgetMap, PortWidgetMap } from "./port/portWidgetMap";
-import { DiagramEventHandlerContext, DiagramEventHandlerMap } from "./store/configuration/eventHandlers";
-import { DiagramStateContext, DiagramStateSelector } from "./store/stateContext";
+import type { NodeWidgetMap } from "./node/nodeWidgetMap";
+import { defaultNodeWidgetMap } from "./node/nodeWidgetMap";
+import type { PortWidgetMap } from "./port/portWidgetMap";
+import { defaultPortWidgetMap } from "./port/portWidgetMap";
+import type { DiagramEventHandlerMap } from "./store/configuration/eventHandlers";
+import { DiagramEventHandlerContext } from "./store/configuration/eventHandlers";
+import type { DiagramStateSelector } from "./store/stateContext";
+import { DiagramStateContext } from "./store/stateContext";
 import { CanvasWidget } from "./canvas/canvasWidget";
 import { ContainerLayer } from "./container/containerLayer";
-import { defaultEdgeLabelWidgetMap, EdgeLabelWidgetMap } from "./edge/edgeLabelWidgetMap";
-import { ContainerWidgetMap, defaultContainerWidgetMap } from "./container/containerWidgetMap";
+import type { EdgeLabelWidgetMap } from "./edge/edgeLabelWidgetMap";
+import { defaultEdgeLabelWidgetMap } from "./edge/edgeLabelWidgetMap";
+import type { ContainerWidgetMap } from "./container/containerWidgetMap";
+import { defaultContainerWidgetMap } from "./container/containerWidgetMap";
 
 export interface DiagramWidgetProps {
 	selectDiagramState: DiagramStateSelector;

@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 export interface DiagramElement {
 	id: string;
 	type: "node" | "edge" | "port" | "container";

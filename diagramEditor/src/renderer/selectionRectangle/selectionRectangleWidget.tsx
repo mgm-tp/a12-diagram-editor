@@ -30,15 +30,17 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import styled from "styled-components";
-import { useState, MouseEvent } from "react";
+import type { MouseEvent } from "react";
+import { useState } from "react";
 
-import { getAreaFromPoints, Point, Rectangle } from "../../core/geometry";
+import type { Point, Rectangle } from "../../core/geometry";
+import { getAreaFromPoints } from "../../core/geometry";
 
 import { getDiagramPosition, getRelativePosition } from "../utils/coordinateConversion";
 import { useDiagramState } from "../store/stateContext";
-import { getCanvasPosition, MouseEventHandler } from "../utils/htmlHelper";
+import type { MouseEventHandler } from "../utils/htmlHelper";
+import { getCanvasPosition } from "../utils/htmlHelper";
 import { useCanvasDragging } from "../common/useCanvasDragging";
 import { useCommonEventHandlers } from "../common/commonEventHandlers";
 

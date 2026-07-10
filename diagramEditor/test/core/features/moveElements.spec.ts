@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { moveElements } from "../../../src/core/features/moveElements";
 import { createConnectedEdge, createDiagramState, createNode } from "../../utils/diagramStateHelper";
 

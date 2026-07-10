@@ -30,15 +30,15 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import styled from "styled-components";
 
-import { DefaultNodeWidget } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/renderer/node/nodeWidget";
-import { ContainerWidget } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/renderer/container/containerWidget";
-import { createDiagramNode } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/diagram/node";
-import { Typography } from "@com.mgmtp.a12.widgets/widgets-core/lib/typography";
-import { HintTooltip } from "@com.mgmtp.a12.widgets/widgets-core";
-import { createDiagramContainer } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/diagram/container";
+import {
+	DefaultNodeWidget,
+	ContainerWidget,
+	createDiagramNode,
+	createDiagramContainer
+} from "@com.mgmtp.a12.diagrameditor/diagrameditor";
+import { Typography, HintTooltip } from "@com.mgmtp.a12.widgets/widgets-core";
 
 export function DiagramElementsBox() {
 	return (

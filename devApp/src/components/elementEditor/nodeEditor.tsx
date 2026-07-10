@@ -30,19 +30,21 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
+import { useDispatch } from "react-redux";
 
-
-import { useDispatch, useSelector } from "react-redux";
-
-import { ActionContentbox, ContentBoxElements } from "@com.mgmtp.a12.widgets/widgets-core/lib/contentbox";
-import { TextField } from "@com.mgmtp.a12.widgets/widgets-core/lib/input/text-field";
-import { Typography } from "@com.mgmtp.a12.widgets/widgets-core/lib/typography";
-import { TextOutput } from "@com.mgmtp.a12.widgets/widgets-core/lib/text-output";
-import { DiagramNode } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/diagram/node";
-import { a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/a12Client/a12DiagramActions";
+import {
+	ActionContentbox,
+	ContentBoxElements,
+	TextField,
+	Typography,
+	TextOutput
+} from "@com.mgmtp.a12.widgets/widgets-core";
+import type { DiagramNode } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
+import { a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 import { selectDiagramState } from "../../examples/store";
 import { useActivityId } from "../../examples/activityIdContext";
+import { useSelector } from "../../hooks";
 
 import { GridContainer } from "./gridContainer";
 import { UiStateSection } from "./uiStateSection";

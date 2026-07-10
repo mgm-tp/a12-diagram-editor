@@ -30,13 +30,12 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { FunctionComponent } from "react";
+import type { FunctionComponent } from "react";
 
 import { DEFAULT_EDGE_TYPE } from "../../core/diagram/edge";
 
-import { EdgeWidget, EdgeWidgetProps } from "./edgeWidget";
+import type { EdgeWidgetProps } from "./edgeWidget";
+import { EdgeWidget } from "./edgeWidget";
 
 export const defaultEdgeWidgetMap = {
 	[DEFAULT_EDGE_TYPE]: EdgeWidget

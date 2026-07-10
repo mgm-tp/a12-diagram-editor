@@ -30,14 +30,13 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { assertExists } from "../../core/assertions";
-import { DEFAULT_EDGE_LABEL_TYPE, EdgeLabel, EdgeLabelPosition } from "../../core/diagram/edge";
+import type { EdgeLabel, EdgeLabelPosition } from "../../core/diagram/edge";
+import { DEFAULT_EDGE_LABEL_TYPE } from "../../core/diagram/edge";
 
 import { useDiagramState } from "../store/stateContext";
 
-import { EdgeLabelWidgetMap } from "./edgeLabelWidgetMap";
+import type { EdgeLabelWidgetMap } from "./edgeLabelWidgetMap";
 
 interface AbstractEdgeLabelWidgetProps {
 	edgeId: string;

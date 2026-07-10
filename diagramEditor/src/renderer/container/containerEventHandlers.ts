@@ -30,10 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
+import type { MouseEvent } from "react";
 
-import { MouseEvent } from "react";
-
-import { Vector } from "../../core/geometry";
+import type { Vector } from "../../core/geometry";
 
 import { diagramActions } from "../store/slice";
 import { useDiagramDispatch, useDiagramState } from "../store/stateContext";

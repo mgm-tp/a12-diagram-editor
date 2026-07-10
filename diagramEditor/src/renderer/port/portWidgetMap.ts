@@ -30,13 +30,12 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { FunctionComponent } from "react";
+import type { FunctionComponent } from "react";
 
 import { DEFAULT_PORT_TYPE } from "../../core/diagram/port";
 
-import { DefaultPortWidget, PortWidgetProps } from "./portWidget";
+import type { PortWidgetProps } from "./portWidget";
+import { DefaultPortWidget } from "./portWidget";
 
 export const defaultPortWidgetMap = {
 	[DEFAULT_PORT_TYPE]: DefaultPortWidget

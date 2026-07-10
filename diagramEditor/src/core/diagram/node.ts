@@ -30,13 +30,12 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { Point, Rectangle } from "../geometry";
+import type { Point, Rectangle } from "../geometry";
 import { generateId } from "../generateId";
 
-import { DiagramPort, generatePorts, PortDistribution, PortMap } from "./port";
-import { DiagramElement } from "./diagramElement";
+import type { DiagramPort, PortDistribution, PortMap } from "./port";
+import { generatePorts } from "./port";
+import type { DiagramElement } from "./diagramElement";
 
 export const DEFAULT_NODE_TYPE = "node";
 

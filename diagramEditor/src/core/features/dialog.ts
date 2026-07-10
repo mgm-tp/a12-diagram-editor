@@ -30,9 +30,7 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { AnyAction } from "@reduxjs/toolkit";
+import type { UnknownAction } from "@reduxjs/toolkit";
 
 export const DEFAULT_DIALOG_TYPE = "dialog";
 
@@ -50,17 +48,17 @@ interface DiagramButton {
 	label: string;
 	primary?: boolean;
 	destructive?: boolean;
-	actions?: AnyAction[];
+	actions?: UnknownAction[];
 }
 
 export interface DiagramDialogState extends DiagramDialog {
 	confirmAction: ConfirmedAction;
 }
 
-interface ConfirmedAction extends AnyAction {
+interface ConfirmedAction extends UnknownAction {
 	confirmed: true;
 }
 
-export function isConfirmedAction(action: AnyAction): action is ConfirmedAction {
+export function isConfirmedAction(action: UnknownAction): action is ConfirmedAction {
 	return action.confirmed === true;
 }

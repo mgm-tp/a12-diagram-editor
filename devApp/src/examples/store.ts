@@ -30,11 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { ActivitySelectors } from "@com.mgmtp.a12.client/client-core/lib/core/activity";
-import { Selector } from "@com.mgmtp.a12.client/client-core/lib/core/store";
-import { DiagramState } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/state";
+import type { Selector } from "@com.mgmtp.a12.client/client-core";
+import { ActivitySelectors } from "@com.mgmtp.a12.client/client-core";
+import type { DiagramState } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 export function selectDiagramState(activityId: string): Selector<DiagramState> {
 	return state => ActivitySelectors.data(activityId)(state) as DiagramState;

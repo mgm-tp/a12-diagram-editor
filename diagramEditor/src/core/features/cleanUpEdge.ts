@@ -30,10 +30,8 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { isSamePoint, resolveLineOrientation } from "../geometry";
-import { DiagramEdge } from "../diagram/edge";
+import type { DiagramEdge } from "../diagram/edge";
 
 export function cleanUpEdge(edge: DiagramEdge, protectedAnchorId?: string): DiagramEdge {
 	const duplicateFree = removeDuplicatedAnchors(edge, protectedAnchorId);

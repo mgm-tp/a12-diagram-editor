@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { createConnectedEdge } from "../../../src/core/diagram/edge";
 import { createNode, createPort } from "../../utils/diagramStateHelper";
 

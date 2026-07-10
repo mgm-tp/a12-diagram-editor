@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import "./commands";
 
 const ignoredWarnings: string[] = ["[webpack-dev-server]"];

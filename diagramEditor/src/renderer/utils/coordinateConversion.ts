@@ -30,9 +30,7 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { Offset, Point } from "../../core/geometry";
+import type { Offset, Point } from "../../core/geometry";
 
 export function getDiagramPosition(
 	canvasPosition: Point,

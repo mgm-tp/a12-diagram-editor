@@ -30,12 +30,11 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { DiagramContainer, resolveContainedElements } from "../diagram/container";
-import { Diagram } from "../diagram/diagram";
+import type { DiagramContainer } from "../diagram/container";
+import { resolveContainedElements } from "../diagram/container";
+import type { Diagram } from "../diagram/diagram";
 import { isConnectedEdge } from "../diagram/edge";
-import { DiagramNode } from "../diagram/node";
+import type { DiagramNode } from "../diagram/node";
 import { isReadonly } from "../state";
 
 export function canAddElementToContainer(

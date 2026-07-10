@@ -32,7 +32,7 @@
 
 import { readFile } from "node:fs/promises";
 
-import prettierPlugin from "eslint-config-prettier";
+import prettierRecommended from "eslint-plugin-prettier/recommended";
 import notice from "eslint-plugin-notice";
 import chaiFriendly from "eslint-plugin-chai-friendly";
 
@@ -46,7 +46,7 @@ const devAppTemplate = (
 /** @type { import("eslint").Linter.Config[] } */
 export default [
 	...reactStrict,
-	prettierPlugin,
+	prettierRecommended,
 	{
 		name: "common",
 		files: ["**/*.ts", "**/*.tsx", ".prettierrc.mjs", "eslint.config.mjs"],
@@ -61,6 +61,12 @@ export default [
 		rules: {
 			// Modified severity or config
 			"@/object-curly-spacing": ["error", "always"],
+			"@typescript-eslint/consistent-type-imports": [
+				"error",
+				{ prefer: "type-imports", fixStyle: "separate-type-imports", disallowTypeAnnotations: false }
+			],
+			"@typescript-eslint/no-import-type-side-effects": "error",
+			"import/no-duplicates": "error",
 			"@typescript-eslint/no-dynamic-delete": "warn",
 			"@typescript-eslint/no-empty-object-type": "warn",
 			"@typescript-eslint/no-floating-promises": "error",
@@ -78,7 +84,20 @@ export default [
 			"react-hooks/rules-of-hooks": "warn",
 			"no-inner-declarations": "warn",
 			"no-param-reassign": "error",
-			curly: "error"
+			curly: "error",
+			"no-restricted-imports": [
+				"error",
+				{
+					paths: [
+						{
+							name: "react-redux",
+							importNames: ["useSelector", "useStore"],
+							message:
+								"Import the typed `useSelector` from `./hooks` (or the local equivalent) instead of `react-redux`."
+						}
+					]
+				}
+			]
 		}
 	},
 	{

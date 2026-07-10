@@ -30,13 +30,13 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-import { MouseEvent } from "react";
+import type { MouseEvent } from "react";
 
 import { assertExists } from "../../core/assertions";
-import { DiagramContainer } from "../../core/diagram/container";
-import { ConnectedDiagramEdge, createUnconnectedEdge } from "../../core/diagram/edge";
-import { DiagramNode } from "../../core/diagram/node";
+import type { DiagramContainer } from "../../core/diagram/container";
+import type { ConnectedDiagramEdge } from "../../core/diagram/edge";
+import { createUnconnectedEdge } from "../../core/diagram/edge";
+import type { DiagramNode } from "../../core/diagram/node";
 
 import { useElementDragging } from "../common/useElementDragging";
 import { useDefaultEdgeEventHandlers } from "../edge/edgeEventHandlers";

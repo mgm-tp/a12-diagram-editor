@@ -30,11 +30,10 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import path from "path";
 
-import webpack from "webpack";
-import WebpackDevServer from "webpack-dev-server";
+import type webpack from "webpack";
+import type WebpackDevServer from "webpack-dev-server";
 import merge from "webpack-merge";
 
 import commonConfig from "./webpack.common";

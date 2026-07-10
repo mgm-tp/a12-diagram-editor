@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { resizeElement } from "../../../src/core/features/resizeElement";
 import { createDiagramState, createNode, createConnectedEdge, createPort } from "../../utils/diagramStateHelper";
 import { createDiagramContainer } from "../../../src/core/diagram/container";

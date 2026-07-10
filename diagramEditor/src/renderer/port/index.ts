@@ -29,7 +29,7 @@
  * NON-INFRINGEMENT, EXCEPT WHERE SUCH DISCLAIMERS ARE HELD TO BE
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
-export * from './portWidget';
-export * from './abstractPortWidget';
-export * from './portWidgetMap';
-export * from './portEventHandlers';
+export * from "./portWidget";
+export * from "./abstractPortWidget";
+export * from "./portWidgetMap";
+export * from "./portEventHandlers";

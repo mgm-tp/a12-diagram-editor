@@ -29,6 +29,6 @@
  * NON-INFRINGEMENT, EXCEPT WHERE SUCH DISCLAIMERS ARE HELD TO BE
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
-export * from './dialogWidget';
-export * from './abstractDialogWidget';
-export * from './dialogWidgetMap';
+export * from "./dialogWidget";
+export * from "./abstractDialogWidget";
+export * from "./dialogWidgetMap";

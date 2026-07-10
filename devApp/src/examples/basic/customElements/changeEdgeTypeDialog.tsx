@@ -30,13 +30,11 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { useDispatch } from "react-redux";
 
 import { Button, ButtonGroup, ModalNotification } from "@com.mgmtp.a12.widgets/widgets-core";
-import { DiagramDialogProps } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/renderer/dialog/dialogWidget";
-import { a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/a12Client/a12DiagramActions";
+import type { DiagramDialogProps } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
+import { a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 import { useActivityId } from "../../activityIdContext";
 

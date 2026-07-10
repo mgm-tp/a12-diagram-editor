@@ -30,8 +30,7 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-import { ApplicationModel } from "@com.mgmtp.a12.client/client-core/lib/core/model";
+import type { ApplicationModel } from "@com.mgmtp.a12.client/client-core";
 
 export const appModel: ApplicationModel = {
 	header: { id: "", modelType: "application", modelVersion: "1.0.0" },

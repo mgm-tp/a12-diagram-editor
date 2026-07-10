@@ -30,20 +30,17 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { useCallback } from "react";
 import { useDispatch } from "react-redux";
 
-import { ActivitySelectors } from "@com.mgmtp.a12.client/client-core/lib/core/activity";
-import { View } from "@com.mgmtp.a12.client/client-core/lib/core/view";
-import { a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/a12Client/a12DiagramActions";
-import { A12DiagramWidget } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/a12Client/a12DiagramWidget";
-import { DiagramState } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/state";
+import type { View } from "@com.mgmtp.a12.client/client-core";
+import { ActivitySelectors } from "@com.mgmtp.a12.client/client-core";
+import type { DiagramState, DiagramEventHandlerMap } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 import {
-	DiagramEventHandlerMap,
+	a12DiagramActions,
+	A12DiagramWidget,
 	useDefaultEventHandlers
-} from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/renderer/store/configuration/eventHandlers";
+} from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 import { OperationsBox } from "../../components/operationsBox";
 import { ElementEditor } from "../../components/elementEditor/elementEditor";

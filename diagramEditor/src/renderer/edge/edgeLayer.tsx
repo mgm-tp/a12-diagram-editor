@@ -30,14 +30,12 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { useDiagramState } from "../store/stateContext";
 import { StackingLayer } from "../common/stackingLayer";
 
-import { EdgeWidgetMap } from "./edgeWidgetMap";
+import type { EdgeWidgetMap } from "./edgeWidgetMap";
 import { AbstractEdgeWidget } from "./abstractEdgeWidget";
-import { EdgeLabelWidgetMap } from "./edgeLabelWidgetMap";
+import type { EdgeLabelWidgetMap } from "./edgeLabelWidgetMap";
 
 interface EdgeLayerProps {
 	edgeWidgetMap: EdgeWidgetMap;

@@ -39,8 +39,8 @@ import packageJson from "../package.json" with { type: "json" };
 import { preferTopLevelImportsRecipe } from "./recipes/prefer-top-level-imports.js";
 
 createCodemodCLI({
-	version: packageJson.version,
 	name: "diagram-editor-codemod",
 	description: "Codemod for assisting with migrations of A12 Diagram Editor",
+	version: packageJson.version,
 	recipes: [preferTopLevelImportsRecipe]
 });

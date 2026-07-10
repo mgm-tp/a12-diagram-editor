@@ -30,12 +30,11 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { AnyAction, Dispatch } from "@reduxjs/toolkit";
+import type { UnknownAction, Dispatch } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
 
-import { DiagramWidget, DiagramWidgetProps } from "../renderer/diagramWidget";
+import type { DiagramWidgetProps } from "../renderer/diagramWidget";
+import { DiagramWidget } from "../renderer/diagramWidget";
 
 interface A12DiagramWidgetProps extends DiagramWidgetProps {
 	activityId: string;
@@ -47,11 +46,11 @@ export function A12DiagramWidget(props: A12DiagramWidgetProps) {
 	return <DiagramWidget customDispatch={a12Dispatch} {...props} />;
 }
 
-function useA12Dispatch(activityId: string): Dispatch<AnyAction> {
+function useA12Dispatch(activityId: string): Dispatch<UnknownAction> {
 	const dispatch = useDispatch();
 
-	return <T extends AnyAction>(action: T): T => {
-		const a12Action = { ...action, payload: { ...action.payload, activityId } };
+	return <T extends UnknownAction>(action: T): T => {
+		const a12Action = { ...action, payload: { ...(action.payload ?? {}), activityId } };
 		return dispatch(a12Action);
 	};
 }

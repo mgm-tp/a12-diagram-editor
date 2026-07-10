@@ -30,17 +30,17 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { Area, calculateDistance, isOrthogonalLine, isPointInArea, Point } from "../geometry";
+import type { Area, Point } from "../geometry";
+import { calculateDistance, isOrthogonalLine, isPointInArea } from "../geometry";
 import { requireArgument } from "../assertions";
 import { generateId } from "../generateId";
 
-import { DiagramElement } from "./diagramElement";
-import { DiagramNode } from "./node";
-import { DiagramPort, getPortPosition } from "./port";
-import { Diagram } from "./diagram";
-import { DiagramContainer } from "./container";
+import type { DiagramElement } from "./diagramElement";
+import type { DiagramNode } from "./node";
+import type { DiagramPort } from "./port";
+import { getPortPosition } from "./port";
+import type { Diagram } from "./diagram";
+import type { DiagramContainer } from "./container";
 
 export const DEFAULT_EDGE_TYPE = "edge";
 export const DEFAULT_EDGE_SEGMENT_TYPE = "edge-segment";

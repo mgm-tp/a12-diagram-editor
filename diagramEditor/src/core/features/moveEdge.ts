@@ -30,11 +30,10 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { Diagram } from "../diagram/diagram";
-import { DiagramEdge, isConnectedEdge } from "../diagram/edge";
-import { Vector } from "../geometry";
+import type { Diagram } from "../diagram/diagram";
+import type { DiagramEdge } from "../diagram/edge";
+import { isConnectedEdge } from "../diagram/edge";
+import type { Vector } from "../geometry";
 import { isReadonly, isSelected } from "../state";
 
 import { canNodeMove } from "./moveNode";

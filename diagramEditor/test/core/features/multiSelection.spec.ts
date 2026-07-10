@@ -30,11 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { toggleSelectedElement, selectElementsInArea } from "../../../src/core/features/multiSelection";
 import { createConnectedEdge, createDiagramState, createNode } from "../../utils/diagramStateHelper";
-import { Area } from "../../../src/core/geometry";
+import type { Area } from "../../../src/core/geometry";
 
 describe("multiSelection", () => {
 	describe("toggleSelectedElement", () => {

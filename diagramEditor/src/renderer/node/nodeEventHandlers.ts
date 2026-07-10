@@ -30,9 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-import { MouseEvent } from "react";
+import type { MouseEvent } from "react";
 
-import { Vector } from "../../core/geometry";
+import type { Vector } from "../../core/geometry";
 import { isNode } from "../../core/state";
 
 import { useElementDragging } from "../common/useElementDragging";

@@ -30,13 +30,12 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import { put } from "typed-redux-saga";
 
-import { ActivityActions } from "@com.mgmtp.a12.client/client-core/lib/core/activity";
-import { DataProvider } from "@com.mgmtp.a12.client/client-core/lib/core/data";
-import { Diagram } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/diagram/diagram";
-import { createDiagramState } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/renderer/store/slice";
+import type { DataProvider } from "@com.mgmtp.a12.client/client-core";
+import { ActivityActions } from "@com.mgmtp.a12.client/client-core";
+import type { Diagram } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
+import { createDiagramState } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 import performanceDiagram from "../../../resources/performanceDiagram.json";
 

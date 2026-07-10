@@ -30,14 +30,15 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-import { memo, SVGAttributes } from "react";
+import type { SVGAttributes } from "react";
+import { memo } from "react";
 import styled, { css } from "styled-components";
 
-import { activeAndHover } from "@com.mgmtp.a12.widgets/widgets-core/lib/theme/base/mixins/_interaction";
+import { activeAndHover } from "@com.mgmtp.a12.widgets/widgets-core";
 
-import { Anchor, DiagramEdge } from "../../core/diagram/edge";
-import { Point, resolveLineOrientation } from "../../core/geometry";
+import type { Anchor, DiagramEdge } from "../../core/diagram/edge";
+import type { Point } from "../../core/geometry";
+import { resolveLineOrientation } from "../../core/geometry";
 
 import { isLeftMouseKey } from "../utils/inputKeys";
 

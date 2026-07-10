@@ -30,9 +30,8 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-import { UIState } from "../state";
-import { Vector } from "../geometry";
+import type { UIState } from "../state";
+import type { Vector } from "../geometry";
 
 export function panCanvas(vector: Vector, uiState: UIState): UIState {
 	return {

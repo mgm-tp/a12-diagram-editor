@@ -30,13 +30,12 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { FunctionComponent } from "react";
+import type { FunctionComponent } from "react";
 
 import { DEFAULT_DIALOG_TYPE } from "../../core/features/dialog";
 
-import { DiagramDialogProps, DialogWidget } from "./dialogWidget";
+import type { DiagramDialogProps } from "./dialogWidget";
+import { DialogWidget } from "./dialogWidget";
 
 export const defaultDialogWidgetMap = {
 	[DEFAULT_DIALOG_TYPE]: DialogWidget

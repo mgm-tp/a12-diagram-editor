@@ -30,11 +30,10 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-import { Diagram } from "../diagram/diagram";
-import { Offset, Point, Rectangle } from "../geometry";
+import type { Diagram } from "../diagram/diagram";
+import type { Offset, Point, Rectangle } from "../geometry";
 import { getNodeCenter } from "../diagram/node";
-import { UIState } from "../state";
+import type { UIState } from "../state";
 import { assertExists } from "../assertions";
 
 export function centerCanvas(diagram: Diagram, uiState: UIState, canvasDimension: Rectangle) {

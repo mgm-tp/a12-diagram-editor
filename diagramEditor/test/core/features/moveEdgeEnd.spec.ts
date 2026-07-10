@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { moveEdgeEnd } from "../../../src/core/features/moveEdgeEnd";
 import { createConnectedEdge, createDiagramState } from "../../utils/diagramStateHelper";
 

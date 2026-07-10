@@ -30,13 +30,12 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { FunctionComponent } from "react";
+import type { FunctionComponent } from "react";
 
 import { DEFAULT_NODE_TYPE } from "../../core/diagram/node";
 
-import { DefaultNodeWidget, NodeWidgetProps } from "./nodeWidget";
+import type { NodeWidgetProps } from "./nodeWidget";
+import { DefaultNodeWidget } from "./nodeWidget";
 
 export const defaultNodeWidgetMap = {
 	[DEFAULT_NODE_TYPE]: DefaultNodeWidget

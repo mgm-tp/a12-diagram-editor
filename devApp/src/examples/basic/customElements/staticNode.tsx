@@ -30,12 +30,8 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import {
-	DefaultNodeWidget,
-	NodeWidgetProps
-} from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/renderer/node/nodeWidget";
+import type { NodeWidgetProps } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
+import { DefaultNodeWidget } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 export const STATIC_NODE_TYPE = "static-node";
 

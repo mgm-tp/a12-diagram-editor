@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { assertUiState, getCanvas, getSelectionRectangle, panCanvas, setDiagramReadonly } from "./utils/utils";
 
 describe("Canvas", () => {

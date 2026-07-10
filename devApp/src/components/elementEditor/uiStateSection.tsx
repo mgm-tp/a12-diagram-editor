@@ -30,16 +30,14 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
+import { useDispatch } from "react-redux";
 
-
-import { useDispatch, useSelector } from "react-redux";
-
-import { Switch } from "@com.mgmtp.a12.widgets/widgets-core/lib/input/switch";
-import { Typography } from "@com.mgmtp.a12.widgets/widgets-core/lib/typography";
-import { a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/a12Client/a12DiagramActions";
+import { Switch, Typography } from "@com.mgmtp.a12.widgets/widgets-core";
+import { a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 import { selectDiagramState } from "../../examples/store";
 import { useActivityId } from "../../examples/activityIdContext";
+import { useSelector } from "../../hooks";
 
 import { GridContainer } from "./gridContainer";
 

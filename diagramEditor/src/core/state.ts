@@ -30,16 +30,14 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { assertExists, requireArgument } from "./assertions";
-import { DiagramContainer } from "./diagram/container";
-import { Diagram } from "./diagram/diagram";
-import { DiagramEdge } from "./diagram/edge";
-import { DiagramNode } from "./diagram/node";
-import { DiagramPort } from "./diagram/port";
-import { DiagramDialogState } from "./features/dialog";
-import { Offset } from "./geometry";
+import type { DiagramContainer } from "./diagram/container";
+import type { Diagram } from "./diagram/diagram";
+import type { DiagramEdge } from "./diagram/edge";
+import type { DiagramNode } from "./diagram/node";
+import type { DiagramPort } from "./diagram/port";
+import type { DiagramDialogState } from "./features/dialog";
+import type { Offset } from "./geometry";
 
 export interface DiagramState {
 	canvasId: string;

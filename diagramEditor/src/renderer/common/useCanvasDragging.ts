@@ -30,10 +30,11 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-import React, { useState } from "react";
+import type React from "react";
+import { useState } from "react";
 
 import { useCanvasContext } from "../canvas/canvasContext";
-import { MouseEventHandler } from "../utils/htmlHelper";
+import type { MouseEventHandler } from "../utils/htmlHelper";
 import { isLeftMouseKey, isRightMouseKey } from "../utils/inputKeys";
 import { useCanvasEventHandlers } from "../canvas/canvasEventHandlers";
 

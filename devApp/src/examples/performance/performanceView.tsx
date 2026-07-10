@@ -30,13 +30,12 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import { useCallback } from "react";
 
-import { ActivitySelectors } from "@com.mgmtp.a12.client/client-core/lib/core/activity";
-import { View } from "@com.mgmtp.a12.client/client-core/lib/core/view";
-import { A12DiagramWidget } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/a12Client/a12DiagramWidget";
-import { DiagramState } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/state";
+import type { View } from "@com.mgmtp.a12.client/client-core";
+import { ActivitySelectors } from "@com.mgmtp.a12.client/client-core";
+import type { DiagramState } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
+import { A12DiagramWidget } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 import { DropArea } from "../../components/dropArea";
 import { ElementEditor } from "../../components/elementEditor/elementEditor";

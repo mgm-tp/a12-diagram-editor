@@ -29,9 +29,9 @@
  * NON-INFRINGEMENT, EXCEPT WHERE SUCH DISCLAIMERS ARE HELD TO BE
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
-export * from './diagramElement';
-export * from './diagram';
-export * from './node';
-export * from './edge';
-export * from './container';
-export * from './port';
+export * from "./diagramElement";
+export * from "./diagram";
+export * from "./node";
+export * from "./edge";
+export * from "./container";
+export * from "./port";

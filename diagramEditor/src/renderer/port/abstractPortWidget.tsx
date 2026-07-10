@@ -30,19 +30,18 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import { memo, useState } from "react";
 import styled from "styled-components";
 
 import { isConnectedEdge, isUnconnectedEdge } from "../../core/diagram/edge";
-import { DiagramPort } from "../../core/diagram/port";
+import type { DiagramPort } from "../../core/diagram/port";
 import { isReadonly } from "../../core/state";
 
 import { useDiagramState } from "../store/stateContext";
 import { isLeftMouseKey } from "../utils/inputKeys";
 import { useCanvasContext } from "../canvas/canvasContext";
 
-import { PortWidgetMap } from "./portWidgetMap";
+import type { PortWidgetMap } from "./portWidgetMap";
 import { usePortEventHandlers } from "./portEventHandlers";
 
 interface AbstractNodeWidgetProps {

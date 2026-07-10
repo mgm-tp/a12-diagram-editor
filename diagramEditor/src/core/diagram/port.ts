@@ -30,14 +30,14 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { calculateDistance, Offset, Point, Rectangle } from "../geometry";
+import type { Offset, Point, Rectangle } from "../geometry";
+import { calculateDistance } from "../geometry";
 import { generateId } from "../generateId";
 
-import { DiagramElement } from "./diagramElement";
-import { DiagramNode, getNodeCenter } from "./node";
-import { DiagramContainer } from "./container";
+import type { DiagramElement } from "./diagramElement";
+import type { DiagramNode } from "./node";
+import { getNodeCenter } from "./node";
+import type { DiagramContainer } from "./container";
 
 export const DEFAULT_PORT_TYPE = "port";
 

@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { moveEdgeAnchor, canMoveEdgeAnchor } from "../../../src/core/features/moveEdgeAnchor";
 import { createConnectedEdge, createDiagramState } from "../../utils/diagramStateHelper";
 

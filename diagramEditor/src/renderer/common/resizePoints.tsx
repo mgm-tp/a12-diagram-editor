@@ -30,12 +30,11 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import styled from "styled-components";
 
-import { DiagramElement } from "../../core/diagram/diagramElement";
-import { ResizePointOrientation } from "../../core/features/resizeElement";
-import { Offset, Rectangle, Vector } from "../../core/geometry";
+import type { DiagramElement } from "../../core/diagram/diagramElement";
+import type { ResizePointOrientation } from "../../core/features/resizeElement";
+import type { Offset, Rectangle, Vector } from "../../core/geometry";
 
 import { useCanvasContext } from "../canvas/canvasContext";
 

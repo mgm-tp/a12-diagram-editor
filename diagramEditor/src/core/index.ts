@@ -29,9 +29,9 @@
  * NON-INFRINGEMENT, EXCEPT WHERE SUCH DISCLAIMERS ARE HELD TO BE
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
-export * from './diagram';
-export * from './features';
-export * from './state';
-export * from './geometry';
-export * from './generateId';
-export * from './assertions';
+export * from "./diagram";
+export * from "./features";
+export * from "./state";
+export * from "./geometry";
+export * from "./generateId";
+export * from "./assertions";

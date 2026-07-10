@@ -30,11 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { panCanvas } from "../../../src/core/features/panCanvas";
-import { UIState } from "../../../src/core/state";
-import { Vector } from "../../../src/core/geometry";
+import type { UIState } from "../../../src/core/state";
+import type { Vector } from "../../../src/core/geometry";
 import { createDiagramState } from "../../utils/diagramStateHelper";
 
 describe("panCanvas", () => {

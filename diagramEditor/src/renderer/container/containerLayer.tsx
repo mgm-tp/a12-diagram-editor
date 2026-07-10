@@ -30,14 +30,12 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { StackingLayer } from "../common/stackingLayer";
-import { PortWidgetMap } from "../port/portWidgetMap";
+import type { PortWidgetMap } from "../port/portWidgetMap";
 import { useDiagramState } from "../store/stateContext";
 
 import { AbstractContainerWidget } from "./abstractContainerWidget";
-import { ContainerWidgetMap } from "./containerWidgetMap";
+import type { ContainerWidgetMap } from "./containerWidgetMap";
 
 interface ContainerLayerProps {
 	containerWidgetMap: ContainerWidgetMap;

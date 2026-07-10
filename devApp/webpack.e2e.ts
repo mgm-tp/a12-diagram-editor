@@ -30,10 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-import webpack from "webpack";
+import type webpack from "webpack";
 import merge from "webpack-merge";
-import WebpackDevServer from "webpack-dev-server";
+import type WebpackDevServer from "webpack-dev-server";
 
 import webAppConfig from "./webpack.webapp";
 

@@ -30,16 +30,19 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import { graphlib, layout } from "@dagrejs/dagre";
 
 import { assertExists, requireArgument } from "../assertions";
-import { Diagram, mergeDiagrams } from "../diagram/diagram";
-import { Anchor, ConnectedDiagramEdge, DiagramEdge, isConnectedEdge } from "../diagram/edge";
+import type { Diagram } from "../diagram/diagram";
+import { mergeDiagrams } from "../diagram/diagram";
+import type { Anchor, ConnectedDiagramEdge, DiagramEdge } from "../diagram/edge";
+import { isConnectedEdge } from "../diagram/edge";
 import { findNearestPort, getPortPosition } from "../diagram/port";
-import { calculateAngle, isRightAngle, Vector } from "../geometry";
+import type { Vector } from "../geometry";
+import { calculateAngle, isRightAngle } from "../geometry";
 import { isNode } from "../state";
-import { DiagramContainer, isDiagramContainer, resolveContainedElements } from "../diagram/container";
+import type { DiagramContainer } from "../diagram/container";
+import { isDiagramContainer, resolveContainedElements } from "../diagram/container";
 import { isDiagramNode } from "../diagram/node";
 import { generateId } from "../generateId";
 

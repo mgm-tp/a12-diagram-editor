@@ -30,11 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
+import { DiagramNode as DiagramNodeWidget } from "@com.mgmtp.a12.widgets/widgets-core";
 
-
-import { DiagramNode as DiagramNodeWidget } from "@com.mgmtp.a12.widgets/widgets-core/lib/model-graph-diagram/main/node.view";
-
-import { DiagramNode } from "../../core/diagram/node";
+import type { DiagramNode } from "../../core/diagram/node";
 
 import { ResizePoints } from "../common/resizePoints";
 

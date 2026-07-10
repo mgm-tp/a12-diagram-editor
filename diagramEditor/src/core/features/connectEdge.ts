@@ -30,13 +30,12 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { isUnconnectedEdge, ConnectedDiagramEdge } from "../diagram/edge";
+import type { ConnectedDiagramEdge } from "../diagram/edge";
+import { isUnconnectedEdge } from "../diagram/edge";
 import { getPortPosition } from "../diagram/port";
 import { assertExists, requireArgument } from "../assertions";
-import { DiagramState } from "../state";
-import { Diagram } from "../diagram/diagram";
+import type { DiagramState } from "../state";
+import type { Diagram } from "../diagram/diagram";
 
 import { moveEdgeEnd } from "./moveEdgeEnd";
 

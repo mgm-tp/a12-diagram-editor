@@ -30,9 +30,8 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-import { UIState } from "../state";
-import { Point } from "../geometry";
+import type { UIState } from "../state";
+import type { Point } from "../geometry";
 
 // A delta of 100 corresponds to a zoom factor change of 20%
 export function applyZoom(delta: number, uiState: UIState, diagramPosition: Point): UIState {

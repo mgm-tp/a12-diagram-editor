@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { getCustomDiagramEdgeByLabel } from "./utils/edgeUtils";
 import { getDiagramNodeByLabel, getCustomDiagramNodeByLabel } from "./utils/nodeUtils";
 

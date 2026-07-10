@@ -30,13 +30,12 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { FunctionComponent } from "react";
+import type { FunctionComponent } from "react";
 
 import { DEFAULT_CONTAINER_TYPE } from "../../core/diagram/container";
 
-import { ContainerWidget, ContainerWidgetProps } from "./containerWidget";
+import type { ContainerWidgetProps } from "./containerWidget";
+import { ContainerWidget } from "./containerWidget";
 
 export const defaultContainerWidgetMap = {
 	[DEFAULT_CONTAINER_TYPE]: ContainerWidget

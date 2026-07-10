@@ -30,24 +30,21 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
+import { useDispatch } from "react-redux";
 
-
-import { useDispatch, useSelector } from "react-redux";
-
-import { TextOutput } from "@com.mgmtp.a12.widgets/widgets-core/lib/text-output";
-import { Typography } from "@com.mgmtp.a12.widgets/widgets-core/lib/typography/main/typography.view";
-import { ActionContentbox } from "@com.mgmtp.a12.widgets/widgets-core/lib/contentbox/main/action-contentbox/action-contentbox.view";
-import { ContentBoxElements } from "@com.mgmtp.a12.widgets/widgets-core/lib/contentbox";
 import {
-	DiagramEdge,
-	EdgeLabel,
-	EdgeLabelPosition
-} from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/diagram/edge";
-import { TextField } from "@com.mgmtp.a12.widgets/widgets-core/lib/input/text-field";
-import { a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/a12Client/a12DiagramActions";
+	TextOutput,
+	Typography,
+	ActionContentbox,
+	ContentBoxElements,
+	TextField
+} from "@com.mgmtp.a12.widgets/widgets-core";
+import type { DiagramEdge, EdgeLabel, EdgeLabelPosition } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
+import { a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 import { selectDiagramState } from "../../examples/store";
 import { useActivityId } from "../../examples/activityIdContext";
+import { useSelector } from "../../hooks";
 
 import { UiStateSection } from "./uiStateSection";
 import { GridContainer } from "./gridContainer";

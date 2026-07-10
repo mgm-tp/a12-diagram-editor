@@ -30,11 +30,11 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import { resolveContainedElements } from "../diagram/container";
-import { Diagram } from "../diagram/diagram";
+import type { Diagram } from "../diagram/diagram";
 import { isConnectedEdge } from "../diagram/edge";
-import { DiagramState, isContainer, isReadonly, UIState } from "../state";
+import type { DiagramState, UIState } from "../state";
+import { isContainer, isReadonly } from "../state";
 
 /**
  * Removes the elements from the diagram.

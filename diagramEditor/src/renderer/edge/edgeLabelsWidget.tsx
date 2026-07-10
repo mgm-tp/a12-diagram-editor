@@ -30,29 +30,29 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 
-import { DiagramLabel } from "@com.mgmtp.a12.widgets/widgets-core/lib/model-graph-diagram/main/label.view";
+import { DiagramLabel } from "@com.mgmtp.a12.widgets/widgets-core";
 
-import {
+import type {
 	Anchor,
 	ConnectedDiagramEdge,
 	EdgeEndLabels,
 	EdgeLabel,
-	UnconnectedDiagramEdge,
-	calculateEdgeMiddlePoint
+	UnconnectedDiagramEdge
 } from "../../core/diagram/edge";
-import { resolvePortOrientation, PortOrientation } from "../../core/diagram/port";
-import { Point, Rectangle } from "../../core/geometry";
-import { DiagramState } from "../../core/state";
+import { calculateEdgeMiddlePoint } from "../../core/diagram/edge";
+import type { PortOrientation } from "../../core/diagram/port";
+import { resolvePortOrientation } from "../../core/diagram/port";
+import type { Point, Rectangle } from "../../core/geometry";
+import type { DiagramState } from "../../core/state";
 
 import { useDiagramState } from "../store/stateContext";
 import { isLeftMouseKey } from "../utils/inputKeys";
 
 import { AbstractEdgeLabelWidget } from "./abstractEdgeLabelWidget";
-import { EdgeLabelWidgetMap } from "./edgeLabelWidgetMap";
+import type { EdgeLabelWidgetMap } from "./edgeLabelWidgetMap";
 import { useEdgeEventHandlers } from "./edgeEventHandlers";
 
 interface EdgeLabelsProps {

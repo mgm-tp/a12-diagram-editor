@@ -30,9 +30,7 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { ConnectedDiagramEdge, DiagramEdge } from "../../../src/core/diagram/edge";
+import type { ConnectedDiagramEdge, DiagramEdge } from "../../../src/core/diagram/edge";
 import { moveNode } from "../../../src/core/features/moveNode";
 import { createConnectedEdge, createDiagramState, createNode } from "../../utils/diagramStateHelper";
 

@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 /**
  * Creates a new stacking context for every layer, i.e. the z-index of children is relative to this layer.
  * For more information on stacking context and z-indices, see https://philipwalton.com/articles/what-no-one-told-you-about-z-index/

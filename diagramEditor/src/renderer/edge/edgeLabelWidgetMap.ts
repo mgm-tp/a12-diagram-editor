@@ -30,13 +30,12 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { FunctionComponent } from "react";
+import type { FunctionComponent } from "react";
 
 import { DEFAULT_EDGE_LABEL_TYPE } from "../../core/diagram/edge";
 
-import { DefaultEdgeLabelWidget, EdgeLabelWidgetProps } from "./edgeLabelsWidget";
+import type { EdgeLabelWidgetProps } from "./edgeLabelsWidget";
+import { DefaultEdgeLabelWidget } from "./edgeLabelsWidget";
 
 export const defaultEdgeLabelWidgetMap = {
 	[DEFAULT_EDGE_LABEL_TYPE]: DefaultEdgeLabelWidget

@@ -30,18 +30,15 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
 
-import { isContainer, isEdge, isNode } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/state";
-import { Icon } from "@com.mgmtp.a12.widgets/widgets-core/lib/icon";
-import { Button } from "@com.mgmtp.a12.widgets/widgets-core/lib/button";
-import { a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/a12Client/a12DiagramActions";
+import { isContainer, isEdge, isNode, a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
+import { Icon, Button } from "@com.mgmtp.a12.widgets/widgets-core";
 
 import { selectDiagramState } from "../../examples/store";
 import { useActivityId } from "../../examples/activityIdContext";
+import { useSelector } from "../../hooks";
 
 import { NodeEditor } from "./nodeEditor";
 import { EdgeEditor } from "./edgeEditor";

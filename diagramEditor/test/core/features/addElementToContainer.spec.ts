@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { addElementToContainer, canAddElementToContainer } from "../../../src/core/features/addElementToContainer";
 import { createDiagramState, createNode, createConnectedEdge } from "../../utils/diagramStateHelper";
 import { createDiagramContainer } from "../../../src/core/diagram/container";

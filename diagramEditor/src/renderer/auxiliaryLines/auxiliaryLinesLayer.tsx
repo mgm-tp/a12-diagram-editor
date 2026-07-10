@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { useDiagramState } from "../store/stateContext";
 
 import { AuxiliaryLinesWidget } from "./auxiliaryLinesWidget";

@@ -30,14 +30,14 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { DiagramContainer } from "../diagram/container";
-import { Diagram } from "../diagram/diagram";
+import type { DiagramContainer } from "../diagram/container";
+import type { Diagram } from "../diagram/diagram";
 import { isConnectedEdge } from "../diagram/edge";
-import { DiagramNode, isDiagramNode } from "../diagram/node";
-import { getPortPosition, PortMap } from "../diagram/port";
-import { Vector } from "../geometry";
+import type { DiagramNode } from "../diagram/node";
+import { isDiagramNode } from "../diagram/node";
+import type { PortMap } from "../diagram/port";
+import { getPortPosition } from "../diagram/port";
+import type { Vector } from "../geometry";
 
 import { moveEdgeEnd } from "./moveEdgeEnd";
 

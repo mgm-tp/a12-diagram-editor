@@ -30,10 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { resolveContainedElements } from "../diagram/container";
-import { DiagramState, isContainer } from "../state";
+import type { DiagramState } from "../state";
+import { isContainer } from "../state";
 
 export function setElementReadonly(elementId: string, state: DiagramState): DiagramState {
 	const result = new Set<string>(Object.keys(state.ui.readonlyElements));

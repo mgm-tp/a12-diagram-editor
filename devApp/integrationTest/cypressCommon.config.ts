@@ -30,9 +30,8 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { existsSync, PathLike, rmdir } from "fs";
+import type { PathLike } from "fs";
+import { existsSync, rmdir } from "fs";
 
 import installLogsPrinter from "cypress-terminal-report/src/installLogsPrinter";
 import webpackPreprocessor from "@cypress/webpack-preprocessor";

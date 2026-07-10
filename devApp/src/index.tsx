@@ -30,9 +30,7 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { Store } from "@reduxjs/toolkit";
+import type { Store } from "@reduxjs/toolkit";
 import { createRoot } from "react-dom/client";
 
 import { App, appSetup } from "./components/app";

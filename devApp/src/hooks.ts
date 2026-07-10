@@ -29,16 +29,10 @@
  * NON-INFRINGEMENT, EXCEPT WHERE SUCH DISCLAIMERS ARE HELD TO BE
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
-export * from "./diagramWidget";
-export * from "./canvas";
-export * from "./node";
-export * from "./edge";
-export * from "./port";
-export * from "./container";
-export * from "./dialog";
-export * from "./common";
-export * from "./grid";
-export * from "./auxiliaryLines";
-export * from "./selectionRectangle";
-export * from "./utils";
-export * from "./store";
+
+import type { Store } from "@reduxjs/toolkit";
+// eslint-disable-next-line no-restricted-imports
+import { useSelector as rawUseSelector, useStore as rawUseStore } from "react-redux";
+
+export const useSelector = rawUseSelector.withTypes<object>();
+export const useStore = rawUseStore.withTypes<Store<object>>();

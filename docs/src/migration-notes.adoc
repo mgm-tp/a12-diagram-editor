@@ -1,0 +1,34 @@
+= Migration Instructions
+
+== 2026.06
+
+=== Breaking changes
+
+==== Removal of Deep Import Paths
+
+Deep import paths from `@com.mgmtp.a12.diagrameditor/diagrameditor` have been removed (for example `@com.mgmtp.a12.diagrameditor/diagrameditor/dist/...`).
+All public exports must now be imported from the package root.
+
+.Before
+[source,typescript]
+----
+import { a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/a12Client/a12DiagramActions";
+----
+
+.After
+[source,typescript]
+----
+import { a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
+----
+
+NOTE: Use `diagrameditor-codemod` with recipe `prefer-top-level-imports` to migrate automatically.
+
+[source,shell]
+----
+npx @com.mgmtp.a12.diagrameditor/diagrameditor-codemod prefer-top-level-imports <path-to-tsconfig>
+----
+
+=== Updating to ES2025
+The javascript output of the npm artifacts was updated from `ES2024` to `ES2025` to be able to use latest language
+features. When using supported browsers, there is no change necessary. If support for older browsers is required, make
+sure to include necessary polyfills.

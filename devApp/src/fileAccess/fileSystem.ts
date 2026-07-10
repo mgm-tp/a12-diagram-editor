@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 export function saveFile(object: object) {
 	const blob = new Blob([JSON.stringify(object, undefined, 2)], { type: "application/json;charset=utf-8" });
 	const url = URL.createObjectURL(blob);

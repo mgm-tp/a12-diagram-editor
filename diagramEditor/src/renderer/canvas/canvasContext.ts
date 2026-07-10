@@ -30,12 +30,11 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import { createContext, useContext } from "react";
 
 import { assertExists } from "../../core/assertions";
 
-import { MouseEventHandler } from "../utils/htmlHelper";
+import type { MouseEventHandler } from "../utils/htmlHelper";
 
 /**
  * Allows consumers to inject event handlers into the canvas. Only one event handler can be active at a time.

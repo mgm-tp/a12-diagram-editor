@@ -30,9 +30,7 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { EdgeWidgetProps } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/renderer/edge/edgeWidget";
+import type { EdgeWidgetProps } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 export const STRAIGHT_EDGE_TYPE = "straight-edge";
 

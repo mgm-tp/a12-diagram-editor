@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { calculateAuxiliaryLines } from "../../../src/core/features/auxiliaryLines";
 import { createNode } from "../../utils/diagramStateHelper";
 

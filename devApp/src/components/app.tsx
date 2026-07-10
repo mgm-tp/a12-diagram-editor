@@ -30,27 +30,23 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import { Provider } from "react-redux";
 import { StyleSheetManager, ThemeProvider } from "styled-components";
 import { devToolsEnhancer } from "@redux-devtools/extension";
-import { compose } from "redux";
+import { compose } from "@reduxjs/toolkit";
 
-import { FrameFactories } from "@com.mgmtp.a12.client/client-core/lib/core/frame";
-import { LocalizerContext } from "@com.mgmtp.a12.utils/utils-localization-react/lib/main";
+import type { ApplicationSetup } from "@com.mgmtp.a12.client/client-core";
+import { ActivityActions, ApplicationFactories, FrameFactories } from "@com.mgmtp.a12.client/client-core";
+import { createHttpModelLoader } from "@com.mgmtp.a12.client/client-core/modelLoader";
+import { LocalizerContext } from "@com.mgmtp.a12.utils/utils-localization-react";
+import type { Locale } from "@com.mgmtp.a12.utils/utils-localization";
 import {
 	defaultDataFormats,
 	defaultValueConversion,
-	defaultLocalizerFactory,
-	Locale
-} from "@com.mgmtp.a12.utils/utils-localization/lib/main";
-import { shouldForwardProp } from "@com.mgmtp.a12.widgets/widgets-core/lib/common/main/should-forward-prop";
-import { GlobalStyles } from "@com.mgmtp.a12.widgets/widgets-core/lib/theme/base";
-import { flatCompactTheme } from "@com.mgmtp.a12.widgets/widgets-core/lib/theme/flat-compact/flat-compact-theme";
-import { ActivityActions } from "@com.mgmtp.a12.client/client-core/lib/core/activity";
-import { ApplicationFactories, ApplicationSetup } from "@com.mgmtp.a12.client/client-core/lib/core/application";
-import { createHttpModelLoader } from "@com.mgmtp.a12.client/client-core/lib/extensions/modelLoader";
-import { diagramBlacklistedActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/reduxDevTools/blacklistedActions";
+	defaultLocalizerFactory
+} from "@com.mgmtp.a12.utils/utils-localization";
+import { shouldForwardProp, GlobalStyles, flatCompactTheme } from "@com.mgmtp.a12.widgets/widgets-core";
+import { diagramBlacklistedActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 import { BasicDiagramView } from "../examples/basic/basicView";
 import { appModel } from "../appModel";
@@ -113,7 +109,11 @@ function viewProvider(name: string) {
 	} else if (name === "SidebarView") {
 		return SideBarView;
 	}
-	return FrameFactories.viewProvider(name);
+	const view = FrameFactories.viewProvider(name);
+	if (!view) {
+		throw new Error(`No view registered for: ${name}`);
+	}
+	return view;
 }
 
 export function appSetup() {

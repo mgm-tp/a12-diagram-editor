@@ -1,9 +1,10 @@
 {
-  "extends": "./node_modules/@com.mgmtp.a12.devtools/tsconfig/tsconfig",
+  "extends": "@com.mgmtp.a12.devtools/tsconfig",
   "compilerOptions": {
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
     "skipLibCheck": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "types": ["node"],
+    // TODO: remove after upgrading to esm
+    "verbatimModuleSyntax": false
   }
 }

@@ -30,18 +30,16 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import styled from "styled-components";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
-import { isNode } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/state";
-import { getCanvasDimensions } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/renderer/utils/htmlHelper";
+import { isNode, getCanvasDimensions, a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 import { Button, Switch, DefaultFileUpload } from "@com.mgmtp.a12.widgets/widgets-core";
-import { a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/a12Client/a12DiagramActions";
 
 import { saveFile } from "../fileAccess/fileSystem";
 import { selectDiagramState } from "../examples/store";
 import { useActivityId } from "../examples/activityIdContext";
+import { useSelector } from "../hooks";
 
 export function OperationsBox() {
 	return (
@@ -84,10 +82,12 @@ export function DeleteButton() {
 	const activityId = useActivityId();
 	const dispatch = useDispatch();
 	const selectedElementMap = useSelector(state => selectDiagramState(activityId)(state).ui.selectedElements);
-	const readonlyElements = useSelector(state => Object.keys(selectDiagramState(activityId)(state).ui.readonlyElements));
+	const readonlyElementMap = useSelector(state => selectDiagramState(activityId)(state).ui.readonlyElements);
 	const readonly = useSelector(state => selectDiagramState(activityId)(state).ui.readonly);
 	const disabled =
-		Object.keys(selectedElementMap).length === 0 || readonlyElements.some(e => selectedElementMap[e]) || readonly;
+		Object.keys(selectedElementMap).length === 0 ||
+		Object.keys(readonlyElementMap).some(e => selectedElementMap[e]) ||
+		readonly;
 
 	return (
 		<Button
@@ -104,8 +104,9 @@ export function CenterNodeButton() {
 	const activityId = useActivityId();
 	const dispatch = useDispatch();
 	const canvasId = useSelector(state => selectDiagramState(activityId)(state).canvasId);
-	const selectedElements = useSelector(state => Object.keys(selectDiagramState(activityId)(state).ui.selectedElements));
+	const selectedElementMap = useSelector(state => selectDiagramState(activityId)(state).ui.selectedElements);
 	const diagram = useSelector(state => selectDiagramState(activityId)(state).diagram);
+	const selectedElements = Object.keys(selectedElementMap);
 	const enabled = selectedElements.length === 1 && isNode(selectedElements[0], diagram);
 
 	return (
@@ -213,7 +214,8 @@ const OperationsContainer = styled.div`
 export function MoveToForegroundButton() {
 	const dispatch = useDispatch();
 	const activityId = useActivityId();
-	const selectedElements = useSelector(state => Object.keys(selectDiagramState(activityId)(state).ui.selectedElements));
+	const selectedElementMap = useSelector(state => selectDiagramState(activityId)(state).ui.selectedElements);
+	const selectedElements = Object.keys(selectedElementMap);
 	const disabled = selectedElements.length === 0;
 
 	return (
@@ -232,7 +234,8 @@ export function MoveToForegroundButton() {
 export function MoveToBackgroundButton() {
 	const dispatch = useDispatch();
 	const activityId = useActivityId();
-	const selectedElements = useSelector(state => Object.keys(selectDiagramState(activityId)(state).ui.selectedElements));
+	const selectedElementMap = useSelector(state => selectDiagramState(activityId)(state).ui.selectedElements);
+	const selectedElements = Object.keys(selectedElementMap);
 	const disabled = selectedElements.length === 0;
 
 	return (

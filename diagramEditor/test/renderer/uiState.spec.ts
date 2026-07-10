@@ -30,11 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { DiagramState } from "../../src/core/state";
+import type { DiagramState } from "../../src/core/state";
 import { defaultDiagramReducer, diagramActions } from "../../src/renderer/store/slice";
-import { DiagramContainer } from "../../src/core/diagram/container";
+import type { DiagramContainer } from "../../src/core/diagram/container";
 
 import {
 	createConnectedEdge,

@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { removeElements } from "../../../src/core/features/removeElements";
 import { createConnectedEdge, createDiagramState, createNode } from "../../utils/diagramStateHelper";
 

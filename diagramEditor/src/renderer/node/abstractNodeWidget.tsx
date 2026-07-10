@@ -30,19 +30,18 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import { memo, useState } from "react";
 import styled from "styled-components";
 
 import { assertExists } from "../../core/assertions";
 
 import { AbstractPortWidget } from "../port/abstractPortWidget";
-import { PortWidgetMap } from "../port/portWidgetMap";
+import type { PortWidgetMap } from "../port/portWidgetMap";
 import { useDiagramState } from "../store/stateContext";
 import { isRightMouseKey, isLeftMouseKey } from "../utils/inputKeys";
 import { useOrderIndex } from "../common/useOrderIndex";
 
-import { NodeWidgetMap } from "./nodeWidgetMap";
+import type { NodeWidgetMap } from "./nodeWidgetMap";
 import { useNodeEventHandlers } from "./nodeEventHandlers";
 
 interface AbstractNodeWidgetProps {

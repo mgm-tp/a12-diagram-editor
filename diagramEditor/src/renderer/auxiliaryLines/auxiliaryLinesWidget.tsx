@@ -30,13 +30,11 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { createSelector } from "@reduxjs/toolkit";
 
 import { calculateAuxiliaryLines } from "../../core/features/auxiliaryLines";
-import { DiagramState } from "../../core/state";
-import { Line } from "../../core/geometry";
+import type { DiagramState } from "../../core/state";
+import type { Line } from "../../core/geometry";
 
 import { useDiagramState } from "../store/stateContext";
 

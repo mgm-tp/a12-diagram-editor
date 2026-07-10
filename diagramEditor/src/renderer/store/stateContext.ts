@@ -30,15 +30,15 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import { createContext, useContext, useMemo } from "react";
-import { useDispatch, useSelector, useStore } from "react-redux";
-import { Dispatch } from "@reduxjs/toolkit";
+import { useDispatch } from "react-redux";
+import type { Dispatch } from "@reduxjs/toolkit";
 
-import { DiagramState } from "../../core/state";
+import type { DiagramState } from "../../core/state";
+
+import { useSelector, useStore } from "./hooks";
 
 export type DiagramStateSelector = (state: object) => DiagramState;
-
 /*
  * Context is only used to (greatly) enhance the code readability, since the selector needs to be passed by the using
  * project.

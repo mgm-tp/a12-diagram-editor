@@ -30,11 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
+import { DiagramNode } from "@com.mgmtp.a12.widgets/widgets-core";
 
-
-import { DiagramNode } from "@com.mgmtp.a12.widgets/widgets-core/lib/model-graph-diagram/main/node.view";
-
-import { DiagramContainer } from "../../core/diagram/container";
+import type { DiagramContainer } from "../../core/diagram/container";
 
 export interface ContainerWidgetProps {
 	container: DiagramContainer;

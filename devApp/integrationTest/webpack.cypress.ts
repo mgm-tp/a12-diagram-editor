@@ -30,9 +30,7 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import * as Webpack from "webpack";
+import type * as Webpack from "webpack";
 
 const commonConfig: Webpack.Configuration = {
 	devtool: false,

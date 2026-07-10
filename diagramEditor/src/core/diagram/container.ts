@@ -30,14 +30,13 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { Point, Rectangle } from "../geometry";
+import type { Point, Rectangle } from "../geometry";
 import { generateId } from "../generateId";
 
-import { generatePorts, PortDistribution, PortMap } from "./port";
-import { DiagramElement } from "./diagramElement";
-import { Diagram } from "./diagram";
+import type { PortDistribution, PortMap } from "./port";
+import { generatePorts } from "./port";
+import type { DiagramElement } from "./diagramElement";
+import type { Diagram } from "./diagram";
 
 export const DEFAULT_CONTAINER_TYPE = "container";
 

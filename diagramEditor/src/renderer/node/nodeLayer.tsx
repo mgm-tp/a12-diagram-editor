@@ -30,13 +30,11 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { useDiagramState } from "../store/stateContext";
-import { PortWidgetMap } from "../port/portWidgetMap";
+import type { PortWidgetMap } from "../port/portWidgetMap";
 import { StackingLayer } from "../common/stackingLayer";
 
-import { NodeWidgetMap } from "./nodeWidgetMap";
+import type { NodeWidgetMap } from "./nodeWidgetMap";
 import { AbstractNodeWidget } from "./abstractNodeWidget";
 
 interface NodeLayerProps {

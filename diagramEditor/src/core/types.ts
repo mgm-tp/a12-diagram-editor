@@ -29,16 +29,9 @@
  * NON-INFRINGEMENT, EXCEPT WHERE SUCH DISCLAIMERS ARE HELD TO BE
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
-export * from "./diagramWidget";
-export * from "./canvas";
-export * from "./node";
-export * from "./edge";
-export * from "./port";
-export * from "./container";
-export * from "./dialog";
-export * from "./common";
-export * from "./grid";
-export * from "./auxiliaryLines";
-export * from "./selectionRectangle";
-export * from "./utils";
-export * from "./store";
+
+export type DeepPartial<T> = T extends object
+	? {
+			[P in keyof T]?: DeepPartial<T[P]>;
+		}
+	: T;

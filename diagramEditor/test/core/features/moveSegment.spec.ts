@@ -30,11 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { moveSegment } from "../../../src/core/features/moveEdgeSegment";
-import { Diagram } from "../../../src/core/diagram/diagram";
-import { Vector } from "../../../src/core/geometry";
+import type { Diagram } from "../../../src/core/diagram/diagram";
+import type { Vector } from "../../../src/core/geometry";
 import { createConnectedEdge, createDiagramState } from "../../utils/diagramStateHelper";
 
 describe("moveRightAngleEdgeWidget", () => {

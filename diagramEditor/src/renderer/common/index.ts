@@ -29,11 +29,11 @@
  * NON-INFRINGEMENT, EXCEPT WHERE SUCH DISCLAIMERS ARE HELD TO BE
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
-export * from './useCanvasDragging';
-export * from './useElementDragging';
-export * from './useVector';
-export * from './useOrderIndex';
-export * from './commonEventHandlers';
-export * from './transformationLayer';
-export * from './stackingLayer';
-export * from './resizePoints';
+export * from "./useCanvasDragging";
+export * from "./useElementDragging";
+export * from "./useVector";
+export * from "./useOrderIndex";
+export * from "./commonEventHandlers";
+export * from "./transformationLayer";
+export * from "./stackingLayer";
+export * from "./resizePoints";

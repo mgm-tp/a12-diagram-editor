@@ -30,13 +30,11 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
+import type { Store, StoreEnhancer } from "@reduxjs/toolkit";
 
-
-import { Store, StoreEnhancer } from "redux";
-
-import { Diagram } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/diagram/diagram";
-import { ActivityMap } from "@com.mgmtp.a12.client/client-core/lib/core/activity";
-import { a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/a12Client/a12DiagramActions";
+import type { Diagram } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
+import { a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
+import type { ActivityMap } from "@com.mgmtp.a12.client/client-core";
 
 declare global {
 	namespace Cypress {

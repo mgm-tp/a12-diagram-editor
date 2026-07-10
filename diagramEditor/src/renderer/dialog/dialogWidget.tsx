@@ -30,13 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
+import { ModalNotification, ButtonGroup, Button } from "@com.mgmtp.a12.widgets/widgets-core";
 
-
-import { ModalNotification } from "@com.mgmtp.a12.widgets/widgets-core/lib/modal-notification";
-import { ButtonGroup } from "@com.mgmtp.a12.widgets/widgets-core/lib/button-group";
-import { Button } from "@com.mgmtp.a12.widgets/widgets-core/lib/button";
-
-import { DiagramDialogState } from "../../core/features/dialog";
+import type { DiagramDialogState } from "../../core/features/dialog";
 
 import { diagramActions } from "../store/slice";
 import { useDiagramDispatch } from "../store/stateContext";

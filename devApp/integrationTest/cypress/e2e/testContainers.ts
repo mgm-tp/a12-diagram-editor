@@ -30,7 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import { getDiagramNodeById, moveNode, multiSelectNode } from "./utils/nodeUtils";
 import { assertUiState } from "./utils/utils";
 import { assertContainerProperties } from "./utils/containerUtils";

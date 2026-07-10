@@ -30,11 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { DiagramContainer } from "./container";
-import { DiagramEdge } from "./edge";
-import { DiagramNode } from "./node";
+import type { DiagramContainer } from "./container";
+import type { DiagramEdge } from "./edge";
+import type { DiagramNode } from "./node";
 
 export interface Diagram {
 	nodes: Record<string, DiagramNode>;

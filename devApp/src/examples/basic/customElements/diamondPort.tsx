@@ -30,11 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import styled from "styled-components";
 
-import { PortWidgetProps } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/renderer/port/portWidget";
+import type { PortWidgetProps } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 export const DIAMOND_PORT_TYPE = "diamond-port";
 

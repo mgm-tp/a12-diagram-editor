@@ -30,9 +30,7 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { UIState } from "../state";
+import type { UIState } from "../state";
 
 export function moveElementToBackground(elementId: string, uiState: UIState): UIState {
 	const newBackgroundElements = uiState.backgroundElements.filter(id => id !== elementId);

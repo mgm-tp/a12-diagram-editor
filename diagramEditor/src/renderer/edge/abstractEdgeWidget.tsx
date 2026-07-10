@@ -30,7 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import { memo } from "react";
 import styled from "styled-components";
 
@@ -38,9 +37,9 @@ import { useDiagramState } from "../store/stateContext";
 import { isLeftMouseKey, isRightMouseKey } from "../utils/inputKeys";
 import { useOrderIndex } from "../common/useOrderIndex";
 
-import { EdgeWidgetMap } from "./edgeWidgetMap";
+import type { EdgeWidgetMap } from "./edgeWidgetMap";
 import { EdgeLabelsWidget } from "./edgeLabelsWidget";
-import { EdgeLabelWidgetMap } from "./edgeLabelWidgetMap";
+import type { EdgeLabelWidgetMap } from "./edgeLabelWidgetMap";
 import { useEdgeEventHandlers } from "./edgeEventHandlers";
 
 interface RightAngleEdgeProps {

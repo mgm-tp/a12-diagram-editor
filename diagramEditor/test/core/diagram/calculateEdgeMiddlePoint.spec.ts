@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { calculateEdgeMiddlePoint } from "../../../src/core/diagram/edge";
 import { createConnectedEdge } from "../../utils/diagramStateHelper";
 

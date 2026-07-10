@@ -30,11 +30,10 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
+import type { MouseEvent } from "react";
 
-import { MouseEvent } from "react";
-
-import { ResizePointOrientation } from "../../core/features/resizeElement";
-import { Area, Vector } from "../../core/geometry";
+import type { ResizePointOrientation } from "../../core/features/resizeElement";
+import type { Area, Vector } from "../../core/geometry";
 
 import { useCustomEventHandlers } from "../store/configuration/eventHandlers";
 import { diagramActions } from "../store/slice";

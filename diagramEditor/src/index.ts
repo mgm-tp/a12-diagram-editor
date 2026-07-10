@@ -29,7 +29,7 @@
  * NON-INFRINGEMENT, EXCEPT WHERE SUCH DISCLAIMERS ARE HELD TO BE
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
-export * from './core';
-export * from './renderer';
-export * from './a12Client';
-export * from './reduxDevTools';
+export * from "./core";
+export * from "./renderer";
+export * from "./a12Client";
+export * from "./reduxDevTools";

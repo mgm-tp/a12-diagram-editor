@@ -30,9 +30,7 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { DiagramNode } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/diagram/node";
+import type { DiagramNode } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 import { idSelector, customTypeSelector, assertDiagramState } from "./utils";
 

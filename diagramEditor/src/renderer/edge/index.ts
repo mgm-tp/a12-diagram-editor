@@ -29,11 +29,11 @@
  * NON-INFRINGEMENT, EXCEPT WHERE SUCH DISCLAIMERS ARE HELD TO BE
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
-export * from './edgeWidget';
-export * from './abstractEdgeWidget';
-export * from './edgeLayer';
-export * from './edgeLabelsWidget';
-export * from './edgeLabelWidgetMap';
-export * from './edgeWidgetMap';
-export * from './abstractEdgeLabelWidget';
-export * from './edgeEventHandlers';
+export * from "./edgeWidget";
+export * from "./abstractEdgeWidget";
+export * from "./edgeLayer";
+export * from "./edgeLabelsWidget";
+export * from "./edgeLabelWidgetMap";
+export * from "./edgeWidgetMap";
+export * from "./abstractEdgeLabelWidget";
+export * from "./edgeEventHandlers";

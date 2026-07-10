@@ -30,10 +30,9 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { Line } from "../geometry";
-import { DiagramNode, areNodesOverlapping } from "../diagram/node";
+import type { Line } from "../geometry";
+import type { DiagramNode } from "../diagram/node";
+import { areNodesOverlapping } from "../diagram/node";
 
 export function calculateAuxiliaryLines(node1: DiagramNode, node2: DiagramNode): Line[] {
 	if (areNodesOverlapping(node1, node2)) {

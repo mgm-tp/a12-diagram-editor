@@ -30,16 +30,14 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
-import { DeepPartial } from "@reduxjs/toolkit";
 import { merge } from "lodash/fp";
 
-import { DiagramState, UIState } from "../../src/core/state";
-import { Diagram } from "../../src/core/diagram/diagram";
-import { DiagramNode } from "../../src/core/diagram/node";
-import { ConnectedDiagramEdge, UnconnectedDiagramEdge } from "../../src/core/diagram/edge";
-import { DiagramPort } from "../../src/core/diagram/port";
+import type { DiagramState, UIState } from "../../src/core/state";
+import type { Diagram } from "../../src/core/diagram/diagram";
+import type { DiagramNode } from "../../src/core/diagram/node";
+import type { ConnectedDiagramEdge, UnconnectedDiagramEdge } from "../../src/core/diagram/edge";
+import type { DiagramPort } from "../../src/core/diagram/port";
+import type { DeepPartial } from "../../src/core/types";
 
 const defaultUiState: UIState = {
 	zoomLevel: 100,
@@ -61,7 +59,7 @@ export function createDiagramState(state?: DeepPartial<DiagramState>): DiagramSt
 		canvasId: `canvas-1`,
 		diagram: merge(defaultDiagram, state?.diagram),
 		ui: merge(defaultUiState, state?.ui),
-		backup: state?.backup
+		backup: state?.backup ? merge(defaultDiagram, state.backup) : undefined
 	};
 }
 

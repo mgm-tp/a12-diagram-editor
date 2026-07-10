@@ -30,24 +30,20 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
+import type { Action } from "@reduxjs/toolkit";
 
-import { Action } from "@reduxjs/toolkit";
-
-import { ActivityReducers } from "@com.mgmtp.a12.client/client-core/lib/core/activity";
-import { Activity } from "@com.mgmtp.a12.client/client-core/lib/core/activity";
+import type { Activity, ActivityReducers } from "@com.mgmtp.a12.client/client-core";
+import type { DiagramState, DiagramEnablementMap } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 import {
 	isConnectedEdge,
-	getConnectedElements
-} from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/diagram/edge";
-import { canNodeMove } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/features/moveNode";
-import { DiagramState, updateEdge } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/state";
-import { DiagramEnablementMap } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/renderer/store/configuration/enablement";
-import { createDiagramReducer } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/renderer/store/reducer";
-import {
+	getConnectedElements,
+	canNodeMove,
+	updateEdge,
+	createDiagramReducer,
 	defaultDiagramReducer,
-	diagramActions
-} from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/renderer/store/slice";
-import { isConfirmedAction } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/features/dialog";
+	diagramActions,
+	isConfirmedAction
+} from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 import { DIAMOND_NODE_TYPE } from "./customElements/diamondNode";
 import { STATIC_NODE_TYPE } from "./customElements/staticNode";

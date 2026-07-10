@@ -30,11 +30,10 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
+import { DiagramPort as DiagramPortWidget } from "@com.mgmtp.a12.widgets/widgets-core";
 
-
-import { DiagramPort as DiagramPortWidget } from "@com.mgmtp.a12.widgets/widgets-core/lib/model-graph-diagram/main/port.view";
-
-import { DEFAULT_PORT_TYPE, DiagramPort } from "../../core/diagram/port";
+import type { DiagramPort } from "../../core/diagram/port";
+import { DEFAULT_PORT_TYPE } from "../../core/diagram/port";
 
 export interface PortWidgetProps {
 	port: DiagramPort;

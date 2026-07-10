@@ -30,18 +30,18 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-import defaultConfig from "@com.mgmtp.a12.devtools/prettier-config"
+import defaultConfig from "@com.mgmtp.a12.devtools/prettier-config";
 
 export default {
-    ...defaultConfig,
-    printWidth: 120,
-    overrides: [
-        {
-            files: "*.js",
-            options: {
-                useTabs: false,
-                tabWidth: 4
-            }
-        }
-    ]
+	...defaultConfig,
+	printWidth: 120,
+	overrides: [
+		{
+			files: "*.js",
+			options: {
+				useTabs: false,
+				tabWidth: 4
+			}
+		}
+	]
 };

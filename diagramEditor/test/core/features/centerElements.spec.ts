@@ -30,12 +30,11 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import { centerNode } from "../../../src/core/features/centerElements";
-import { Diagram } from "../../../src/core/diagram/diagram";
-import { DiagramNode } from "../../../src/core/diagram/node";
-import { Rectangle } from "../../../src/core/geometry";
-import { UIState } from "../../../src/core/state";
+import type { Diagram } from "../../../src/core/diagram/diagram";
+import type { DiagramNode } from "../../../src/core/diagram/node";
+import type { Rectangle } from "../../../src/core/geometry";
+import type { UIState } from "../../../src/core/state";
 import { createNode, createDiagramState } from "../../utils/diagramStateHelper";
 
 describe("centerNode", () => {

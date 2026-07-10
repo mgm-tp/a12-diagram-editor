@@ -30,8 +30,6 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import { defineConfig } from "cypress";
 
 import { commonCypressConfig, commonE2EConfig } from "./cypressCommon.config";

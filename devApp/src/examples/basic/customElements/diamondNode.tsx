@@ -30,13 +30,10 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-
 import styled from "styled-components";
 import { useState } from "react";
 
-import { DiagramNode } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/core/diagram/node";
-import { NodeWidgetProps } from "@com.mgmtp.a12.diagrameditor/diagrameditor/dist/renderer/node/nodeWidget";
+import type { DiagramNode, NodeWidgetProps } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 export const DIAMOND_NODE_TYPE = "diamond-node";
 

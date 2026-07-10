@@ -30,8 +30,7 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
-import { Point, Rectangle } from "../../core/geometry";
+import type { Point, Rectangle } from "../../core/geometry";
 import { assertExists } from "../../core/assertions";
 
 export type MouseEventHandler = (event: React.MouseEvent) => void;

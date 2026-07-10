@@ -30,27 +30,20 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
-
 import { createContext, useContext } from "react";
 
-import {
-	CanvasEventHandlers,
-	useCanvasEventHandlers,
-	useDefaultCanvasEventHandlers
-} from "../../canvas/canvasEventHandlers";
-import {
-	CommonEventHandlers,
-	useCommonEventHandlers,
-	useDefaultCommonEventHandlers
-} from "../../common/commonEventHandlers";
-import {
-	ContainerEventHandlers,
-	useContainerEventHandlers,
-	useDefaultContainerEventHandlers
-} from "../../container/containerEventHandlers";
-import { EdgeEventHandlers, useDefaultEdgeEventHandlers, useEdgeEventHandlers } from "../../edge/edgeEventHandlers";
-import { NodeEventHandlers, useDefaultNodeEventHandlers, useNodeEventHandlers } from "../../node/nodeEventHandlers";
-import { PortEventHandlers, useDefaultPortEventHandlers, usePortEventHandlers } from "../../port/portEventHandlers";
+import type { CanvasEventHandlers } from "../../canvas/canvasEventHandlers";
+import { useCanvasEventHandlers, useDefaultCanvasEventHandlers } from "../../canvas/canvasEventHandlers";
+import type { CommonEventHandlers } from "../../common/commonEventHandlers";
+import { useCommonEventHandlers, useDefaultCommonEventHandlers } from "../../common/commonEventHandlers";
+import type { ContainerEventHandlers } from "../../container/containerEventHandlers";
+import { useContainerEventHandlers, useDefaultContainerEventHandlers } from "../../container/containerEventHandlers";
+import type { EdgeEventHandlers } from "../../edge/edgeEventHandlers";
+import { useDefaultEdgeEventHandlers, useEdgeEventHandlers } from "../../edge/edgeEventHandlers";
+import type { NodeEventHandlers } from "../../node/nodeEventHandlers";
+import { useDefaultNodeEventHandlers, useNodeEventHandlers } from "../../node/nodeEventHandlers";
+import type { PortEventHandlers } from "../../port/portEventHandlers";
+import { useDefaultPortEventHandlers, usePortEventHandlers } from "../../port/portEventHandlers";
 
 export type RequiredDiagramEventHandlerMap = CanvasEventHandlers &
 	NodeEventHandlers &
