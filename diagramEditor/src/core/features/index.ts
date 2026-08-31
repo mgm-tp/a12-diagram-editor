@@ -37,6 +37,7 @@ export * from "./connectEdge";
 export * from "./dialog";
 export * from "./disconnectEdge";
 export * from "./layout";
+export * from "./layoutStateManager";
 export * from "./moveContainer";
 export * from "./moveEdge";
 export * from "./moveEdgeAnchor";

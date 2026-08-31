@@ -2,6 +2,17 @@ packages:
   - devApp
   - diagramEditor
   - codemod
+
+overrides:
+  "@isaacs/brace-expansion": "catalog:"
+  "motion": "^12.43.0"
+  "framer-motion": "^12.43.0"
+confirmModulesPurge: false
+# pnpm 11 quarantines packages published less than 24h ago (minimumReleaseAge default).
+# We exempt A12 versions for new releases, build versions etc.
+minimumReleaseAgeExclude:
+- '@com.mgmtp.a12.*'
+
 catalog:
   "@babel/core": 7.26.9
   "@babel/preset-env": 7.26.9
@@ -18,12 +29,12 @@ catalog:
   "@com.mgmtp.a12.kernel/kernel-md-facade": 31.1.0
   "@com.mgmtp.a12.utils/utils-connector": 9.0.1
   "@com.mgmtp.a12.utils/utils-logging": 7.0.1
-  "@com.mgmtp.a12.widgets/widgets-core": 39.0.1
+  "@com.mgmtp.a12.widgets/widgets-core": 39.0.3
   "@com.mgmtp.a12.utils/utils-localization": 8.0.1
   "@com.mgmtp.a12.utils/utils-localization-react": 8.0.1
   "@cypress/webpack-preprocessor": 6.0.2
   "@dagrejs/dagre": 1.1.5
-  "@isaacs/brace-expansion": 5.0.1
+  "@isaacs/brace-expansion": 5.0.7
   "@reduxjs/toolkit": 2.11.2
   "@redux-devtools/extension": 3.3.0
   "@svgr/webpack": 8.1.0
@@ -61,13 +72,14 @@ catalog:
   react-redux: 9.2.0
   redux-saga: 1.4.2
   source-map-loader: 5.0.0
+  start-server-and-test: 3.0.11
   styled-components: 6.1.16
   terser-webpack-plugin: 5.3.12
   ts-node: 10.9.2
   typed-redux-saga: 1.5.0
   typescript: 6.0.2
   typescript-eslint: 8.58.1
-  uuid: 11.1.0
+  uuid: 11.1.1
   wait-on: 8.0.2
   vitest: 3.2.4
   webpack: 5.98.0
@@ -81,3 +93,8 @@ catalogs:
     "@reduxjs/toolkit": ^2.0.0
     "react": ^19.0.0
     "styled-components": ^6.1.16
+
+allowBuilds:
+  core-js: true
+  cypress: true
+  esbuild: true

@@ -29,7 +29,6 @@
  * NON-INFRINGEMENT, EXCEPT WHERE SUCH DISCLAIMERS ARE HELD TO BE
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
-
 import { graphlib, layout } from "@dagrejs/dagre";
 
 import { assertExists, requireArgument } from "../assertions";
@@ -40,7 +39,7 @@ import { isConnectedEdge } from "../diagram/edge";
 import { findNearestPort, getPortPosition } from "../diagram/port";
 import type { Vector } from "../geometry";
 import { calculateAngle, isRightAngle } from "../geometry";
-import { isNode } from "../state";
+import { isContainer, isNode } from "../state";
 import type { DiagramContainer } from "../diagram/container";
 import { isDiagramContainer, resolveContainedElements } from "../diagram/container";
 import { isDiagramNode } from "../diagram/node";
@@ -50,21 +49,34 @@ import { moveEdgeEnd } from "./moveEdgeEnd";
 import { moveElements } from "./moveElements";
 import { resizeElement } from "./resizeElement";
 import { moveContainer } from "./moveContainer";
+import type { LayoutAlignment, LayoutDirection, LayoutStrategy, LayoutStrategyState } from "./layoutStateManager";
+import { advanceStrategyState, DefaultStrategy } from "./layoutStateManager";
 
-export function layoutDiagram(diagram: Diagram): Diagram {
-	const layouted = layoutDiagramRecursively(diagram);
+export function layoutDiagram(diagram: Diagram, layoutStrategy: LayoutStrategy = DefaultStrategy): Diagram {
+	const layouted = layoutDiagramRecursively(diagram, { strategy: layoutStrategy, counter: 0 });
 	const orthogonal = enforceOrthogonalEdges(layouted);
 	return connectEdgesToNearestPorts(orthogonal);
 }
 
-function layoutDiagramRecursively(diagram: Diagram): Diagram {
+function layoutDiagramRecursively(
+	diagram: Diagram,
+	state: LayoutStrategyState,
+	currentContainer?: DiagramContainer
+): Diagram {
+	const currentState = advanceStrategyState(state, currentContainer);
 	let result = diagram;
-	Object.values(result.containers)
+	const childContainers = new Set(
+		Object.values(diagram.containers)
+			.flatMap(container => container.children)
+			.filter(child => isContainer(child, diagram))
+	);
+	const topLevelContainers = Object.values(diagram.containers).filter(container => !childContainers.has(container.id));
+	topLevelContainers
 		.filter(container => container.children.length > 0)
 		.forEach(({ id }) => {
 			const container = result.containers[id];
 			const subDiagram = createDiagramFromContainer(container, result);
-			const layouted = layoutDiagramRecursively(subDiagram);
+			const layouted = layoutDiagramRecursively(subDiagram, currentState, container);
 			const merged = mergeDiagrams(result, layouted);
 			const vector = { x: container.x + 20, y: container.y + 40 };
 			const moved = moveElements(container.children, {}, vector, merged);
@@ -77,7 +89,12 @@ function layoutDiagramRecursively(diagram: Diagram): Diagram {
 		.flatMap(container => container.children)
 		.forEach(childId => ids.delete(childId));
 
-	const layouted = layoutByIds(result, ids);
+	const layouted = layoutByIds(
+		result,
+		ids,
+		currentState.currentRankDir ?? currentState.strategy.globalRankdir,
+		currentState.currentAlign ?? currentState.strategy.globalAlign
+	);
 	return mergeDiagrams(result, layouted);
 }
 
@@ -93,17 +110,22 @@ function createDiagramFromContainer(container: DiagramContainer, diagram: Diagra
 	return subDiagram;
 }
 
-function layoutByIds(diagram: Diagram, ids: Set<string>): Diagram {
-	const graph = createDagreGraph(diagram, ids);
+function layoutByIds(diagram: Diagram, ids: Set<string>, rankdir: LayoutDirection, align: LayoutAlignment): Diagram {
+	const graph = createDagreGraph(diagram, ids, rankdir, align);
 	layout(graph);
 	return convertDagreGraph(graph, diagram);
 }
 
 const GENERATED_EDGE_ID = "generated";
 
-function createDagreGraph(diagram: Diagram, ids: Set<string>): graphlib.Graph {
+function createDagreGraph(
+	diagram: Diagram,
+	ids: Set<string>,
+	rankdir: LayoutDirection,
+	align: LayoutAlignment
+): graphlib.Graph {
 	const graph = new graphlib.Graph({ multigraph: true });
-	graph.setGraph({ rankdir: "LR", align: "DL", ranksep: 100, nodesep: 50 });
+	graph.setGraph({ rankdir: rankdir, align: align, ranksep: 100, nodesep: 50 });
 	const containerMap = new Map<string, string>();
 	ids.forEach(id => {
 		const container = diagram.containers[id];

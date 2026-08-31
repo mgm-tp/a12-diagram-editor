@@ -41,6 +41,8 @@ import { selectDiagramState } from "../examples/store";
 import { useActivityId } from "../examples/activityIdContext";
 import { useSelector } from "../hooks";
 
+import { LayoutNodeButton } from "./layoutNodeButton";
+
 export function OperationsBox() {
 	return (
 		<OperationsContainer>
@@ -71,13 +73,6 @@ export function CenterCanvasButton() {
 		/>
 	);
 }
-
-export function LayoutNodeButton() {
-	const dispatch = useDispatch();
-	const activityId = useActivityId();
-	return <Button label="Layout" onClick={() => dispatch(a12DiagramActions.diagramLayouted({ activityId }))} />;
-}
-
 export function DeleteButton() {
 	const activityId = useActivityId();
 	const dispatch = useDispatch();

@@ -64,7 +64,6 @@ export function centerNode(nodeId: string, diagram: Diagram, uiState: UIState, c
 function calculateOffset(centerPosition: Point, zoomLevel: number, canvasDimension: Rectangle): Offset {
 	const scaledX = (centerPosition.x * zoomLevel) / 100;
 	const scaledY = (centerPosition.y * zoomLevel) / 100;
-	console.log(canvasDimension);
 	return {
 		left: canvasDimension.width / 2 - scaledX,
 		top: canvasDimension.height / 2 - scaledY

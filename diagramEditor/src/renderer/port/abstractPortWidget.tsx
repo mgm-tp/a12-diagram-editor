@@ -33,13 +33,13 @@
 import { memo, useState } from "react";
 import styled from "styled-components";
 
-import { isConnectedEdge, isUnconnectedEdge } from "../../core/diagram/edge";
 import type { DiagramPort } from "../../core/diagram/port";
 import { isReadonly } from "../../core/state";
 
 import { useDiagramState } from "../store/stateContext";
 import { isLeftMouseKey } from "../utils/inputKeys";
 import { useCanvasContext } from "../canvas/canvasContext";
+import { selectConnectedEdgeByPortId, selectUnconnectedEdgeId } from "../edge/edgeSelectors";
 
 import type { PortWidgetMap } from "./portWidgetMap";
 import { usePortEventHandlers } from "./portEventHandlers";
@@ -58,18 +58,10 @@ function AbstractPortWidgetInternal(props: AbstractNodeWidgetProps) {
 	const type = port.customType ?? port.type;
 	const Widget = portWidgetMap[type];
 	const parent = useDiagramState(state => state.diagram.nodes[parentId] ?? state.diagram.containers[parentId]);
-	const parentReadonly = useDiagramState(state => isReadonly(parentId, state.ui.readonlyElements));
-	const diagramReadonly = useDiagramState(state => state.ui.readonly);
-	const readonly = parentReadonly || diagramReadonly;
+	const readonly = useDiagramState(state => isReadonly(parentId, state.ui.readonlyElements) || state.ui.readonly);
 	const [hovered, setHovered] = useState(false);
-	const unconnectedEdgeId = useDiagramState(
-		state => Object.values(state.diagram.edges).find(edge => isUnconnectedEdge(edge))?.id
-	);
-	const connectedEdge = useDiagramState(state =>
-		Object.values(state.diagram.edges)
-			.filter(isConnectedEdge)
-			.find(edge => edge.sourcePortId === port.id || edge.targetPortId === port.id)
-	);
+	const unconnectedEdgeId = useDiagramState(selectUnconnectedEdgeId);
+	const connectedEdge = useDiagramState(selectConnectedEdgeByPortId(port.id));
 	const canvasContext = useCanvasContext();
 	const { onConnectedPortMouseDown, onUnconnectedPortMouseDown, onEdgeConnectedToPort } = usePortEventHandlers();
 

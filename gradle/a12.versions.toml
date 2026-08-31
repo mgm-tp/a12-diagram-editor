@@ -1,0 +1,13 @@
+[versions]
+artifact-publish = "0.4.2"
+build-utilities = "0.4.1"
+integration = "0.1.4"
+third-party-notices = "0.2.17"
+
+[libraries]
+build-utilities = { module = "com.mgmtp.a12.devtools.plugins:build-utilities", version.ref = "build-utilities" }
+
+[plugins]
+artifact-publish = { id = "com.mgmtp.a12.bd.artifact-publish", version.ref = "artifact-publish" }
+integration = { id = "com.mgmtp.a12.devtools.plugins.integration", version.ref = "integration" }
+third-party-notices = { id = "com.mgmtp.a12.devtools.plugins.third-party-notices", version.ref = "third-party-notices" }

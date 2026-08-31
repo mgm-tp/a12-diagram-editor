@@ -29,3 +29,28 @@
  * NON-INFRINGEMENT, EXCEPT WHERE SUCH DISCLAIMERS ARE HELD TO BE
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
+
+import { createSelector } from "@reduxjs/toolkit";
+
+import type { ConnectedDiagramEdge } from "../../core/diagram/edge";
+import { isConnectedEdge, isUnconnectedEdge } from "../../core/diagram/edge";
+import type { DiagramState } from "../../core/state";
+
+export const selectUnconnectedEdgeId = createSelector(
+	[(state: DiagramState) => state.diagram.edges],
+	edges => Object.values(edges).find(isUnconnectedEdge)?.id
+);
+
+export const selectConnectedEdgesByPortId = createSelector([(state: DiagramState) => state.diagram.edges], edges => {
+	const map: Record<string, ConnectedDiagramEdge> = {};
+	for (const edge of Object.values(edges)) {
+		if (isConnectedEdge(edge)) {
+			map[edge.sourcePortId] = edge;
+			map[edge.targetPortId] = edge;
+		}
+	}
+	return map;
+});
+
+export const selectConnectedEdgeByPortId = (portId: string) => (state: DiagramState) =>
+	selectConnectedEdgesByPortId(state)[portId];

@@ -11,7 +11,7 @@ devApp/public/basic.css
 devApp/public/fonts/*
 
 .gradle
-gradle
+gradle/wrapper
 gradlew*
 node_modules
 

@@ -65,6 +65,7 @@ import { resizeElement } from "../../core/features/resizeElement";
 import type { DiagramContainer } from "../../core/diagram/container";
 import { setElementReadonly, unsetElementReadonly } from "../../core/features/setElementsReadonly";
 import type { DeepPartial } from "../../core/types";
+import type { LayoutStrategy } from "../../core/features/layoutStateManager";
 
 export function createDiagramState(uiState?: Partial<UIState>, diagram?: Partial<Diagram>): DiagramState {
 	return {
@@ -200,8 +201,8 @@ const slice = createSlice({
 		dragEnded(state) {
 			state.ui.isDragging = false;
 		},
-		diagramLayouted(state) {
-			state.diagram = layoutDiagram(state.diagram);
+		diagramLayouted(state, action: PayloadAction<{ layoutStrategy?: LayoutStrategy }>) {
+			state.diagram = layoutDiagram(state.diagram, action.payload.layoutStrategy);
 		},
 		diagramLoaded(state, action: PayloadAction<{ diagram: Diagram }>) {
 			state.diagram = action.payload.diagram;

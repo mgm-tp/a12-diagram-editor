@@ -40,6 +40,7 @@
     "eslint-plugin-chai-friendly": "catalog:",
     "html-webpack-plugin": "catalog:",
     "source-map-loader": "catalog:",
+    "start-server-and-test": "catalog:",
     "terser-webpack-plugin": "catalog:",
     "ts-node": "catalog:",
     "wait-on": "catalog:",
@@ -58,11 +59,12 @@
     "cypress:open": "cypress open --project integrationTest",
     "cypress:headless": "cypress run --project integrationTest --headless",
     "depcheck": "depcheck",
+    "e2e": "start-server-and-test startE2E http-get://127.0.0.1:8093 e2eTestChrome",
     "e2eTestChrome": "pnpm run cypress:headless -- --browser chrome",
     "e2eTestFirefox": "pnpm run cypress:headless -- --browser firefox",
     "start": "webpack serve --config webpack.dev.ts",
     "startE2E": "webpack serve --config webpack.e2e.ts",
-    "waitWhileStarting": "wait-on http-get:127.0.0.1:8093",
+    "waitWhileStarting": "wait-on http-get://127.0.0.1:8093",
     "webpack": "cross-env process.env.NODE_ENV=production webpack --config webpack.webapp.ts"
   }
 }

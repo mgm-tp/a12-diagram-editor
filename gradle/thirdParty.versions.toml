@@ -1,0 +1,14 @@
+[versions]
+pnpm = "11.15.1"
+json = "20231013"
+node-gradle = "3.4.0"
+git-version = "0.15.0"
+docker-remote-api = "9.4.0"
+
+[libraries]
+json = { module = "org.json:json", version.ref = "json" }
+
+[plugins]
+node-gradle = { id = "com.github.node-gradle.node", version.ref = "node-gradle" }
+palantir-git = { id = "com.palantir.git-version", version.ref = "git-version" }
+docker-remote-api = { id = "com.bmuschko.docker-remote-api", version.ref = "docker-remote-api" }

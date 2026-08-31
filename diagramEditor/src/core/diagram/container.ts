@@ -30,6 +30,7 @@
  * LEGALLY INVALID. SEE THE RESPECTIVE LICENSE TEXT FOR DETAILS.
  */
 
+import type { LayoutSettings } from "../features/layoutStateManager";
 import type { Point, Rectangle } from "../geometry";
 import { generateId } from "../generateId";
 
@@ -41,7 +42,7 @@ import type { Diagram } from "./diagram";
 export const DEFAULT_CONTAINER_TYPE = "container";
 
 // Position of container specifies the coordinate of the left top corner
-export interface DiagramContainer extends DiagramElement, Point, Rectangle {
+export interface DiagramContainer extends DiagramElement, Point, Rectangle, LayoutSettings {
 	type: typeof DEFAULT_CONTAINER_TYPE;
 	label: string;
 	ports: PortMap;
@@ -66,10 +67,12 @@ export function createDiagramContainer(
 		width = 160,
 		height = 80,
 		ports = {},
-		children = []
+		children = [],
+		rankdir = undefined,
+		align = undefined
 	} = partialContainer;
 
-	const container = { id, type, x, y, width, height, label, ports, children, customType };
+	const container = { id, type, x, y, width, height, label, ports, children, customType, rankdir, align };
 	const generatedPorts = portDistribution ? generatePorts(container, 4, portDistribution) : ports;
 	return { ...container, ports: generatedPorts };
 }

@@ -35,11 +35,12 @@ import { useDispatch } from "react-redux";
 import {
 	ActionContentbox,
 	ContentBoxElements,
+	Select,
 	TextField,
 	Typography,
 	TextOutput
 } from "@com.mgmtp.a12.widgets/widgets-core";
-import type { DiagramContainer } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
+import type { DiagramContainer, LayoutAlignment, LayoutDirection } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 import { a12DiagramActions } from "@com.mgmtp.a12.diagrameditor/diagrameditor";
 
 import { selectDiagramState } from "../../examples/store";
@@ -65,6 +66,8 @@ export function ContainerEditor(props: ContainerEditorProps) {
 			<GeneralInformation container={container} />
 			<Label container={container} />
 			<UiStateSection id={id} />
+			<LayoutDirectionSelect container={container} />
+			<LayoutAlignmentSelect container={container} />
 		</ActionContentbox>
 	);
 }
@@ -109,6 +112,68 @@ function Label(props: ContainerProps) {
 							activityId,
 							containerId: container.id,
 							updates: { label: event.target.value }
+						})
+					)
+				}
+			/>
+		</>
+	);
+}
+
+function LayoutDirectionSelect(props: ContainerProps) {
+	const { container } = props;
+	const dispatch = useDispatch();
+	const activityId = useActivityId();
+	return (
+		<>
+			<Select
+				label="Layout Direction"
+				value={container.rankdir ?? ""}
+				items={[
+					{ label: "Diagram Default", value: "" },
+					{ label: "Parent Container Direction", value: "parent" },
+					{ label: "Left to Right", value: "LR" },
+					{ label: "Top to Bottom", value: "TB" },
+					{ label: "Right to Left", value: "RL" },
+					{ label: "Bottom to Top", value: "BT" }
+				]}
+				onValueChanged={value =>
+					dispatch(
+						a12DiagramActions.containerUpdated({
+							activityId,
+							containerId: container.id,
+							updates: { rankdir: (value || undefined) as LayoutDirection | undefined }
+						})
+					)
+				}
+			/>
+		</>
+	);
+}
+
+function LayoutAlignmentSelect(props: ContainerProps) {
+	const { container } = props;
+	const dispatch = useDispatch();
+	const activityId = useActivityId();
+	return (
+		<>
+			<Select
+				label="Layout Alignment"
+				value={container.align ?? ""}
+				items={[
+					{ label: "Diagram Default", value: "" },
+					{ label: "Parent Container Alignment", value: "parent" },
+					{ label: "Up Left", value: "UL" },
+					{ label: "Up Right", value: "UR" },
+					{ label: "Down Left", value: "DL" },
+					{ label: "Down Right", value: "DR" }
+				]}
+				onValueChanged={value =>
+					dispatch(
+						a12DiagramActions.containerUpdated({
+							activityId,
+							containerId: container.id,
+							updates: { align: (value || undefined) as LayoutAlignment | undefined }
 						})
 					)
 				}

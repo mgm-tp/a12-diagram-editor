@@ -30,11 +30,5 @@
 		"react-redux": "catalog:",
 		"typescript-eslint": "catalog:",
 		"typescript": "catalog:"
-	},
-	"pnpm": {
-		"neverBuiltDependencies": [],
-		"overrides": {
-			"@isaacs/brace-expansion": "catalog:"
-		}
 	}
 }
